@@ -4,9 +4,9 @@
   <subtitle>the more you know the more you know you don&#39;t know</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://mengbaby.github.io/"/>
+  <link href="https://zhangmeng712.github.io/"/>
   <updated>2017-04-17T07:02:37.000Z</updated>
-  <id>https://mengbaby.github.io/</id>
+  <id>https://zhangmeng712.github.io/</id>
   
   <author>
     <name>Dr Meng</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>前端自动化测试（三）- angular和protracor</title>
-    <link href="https://mengbaby.github.io/2016/03/10/f2e-testing-angular/"/>
-    <id>https://mengbaby.github.io/2016/03/10/f2e-testing-angular/</id>
+    <link href="https://zhangmeng712.github.io/2016/03/10/f2e-testing-angular/"/>
+    <id>https://zhangmeng712.github.io/2016/03/10/f2e-testing-angular/</id>
     <published>2016-03-09T20:53:58.000Z</published>
     <updated>2017-04-17T07:02:37.000Z</updated>
     
@@ -112,25 +112,25 @@
     
     </summary>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/categories/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/categories/nodejs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="angular" scheme="https://mengbaby.github.io/Mtags/angular/"/>
+      <category term="angular" scheme="https://zhangmeng712.github.io/Mtags/angular/"/>
     
-      <category term="e2e" scheme="https://mengbaby.github.io/Mtags/e2e/"/>
+      <category term="e2e" scheme="https://zhangmeng712.github.io/Mtags/e2e/"/>
     
-      <category term="protractor" scheme="https://mengbaby.github.io/Mtags/protractor/"/>
+      <category term="protractor" scheme="https://zhangmeng712.github.io/Mtags/protractor/"/>
     
   </entry>
   
   <entry>
     <title>前端自动化测试之单元测试（二）—— react组件的测试工具jest</title>
-    <link href="https://mengbaby.github.io/2016/02/10/f2e-testing-jest/"/>
-    <id>https://mengbaby.github.io/2016/02/10/f2e-testing-jest/</id>
+    <link href="https://zhangmeng712.github.io/2016/02/10/f2e-testing-jest/"/>
+    <id>https://zhangmeng712.github.io/2016/02/10/f2e-testing-jest/</id>
     <published>2016-02-09T22:47:02.000Z</published>
     <updated>2017-04-17T07:15:39.000Z</updated>
     
@@ -170,8 +170,8 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">parseUserJson</span>(<span class="params">userJson</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">loggedIn</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">fullName</span>: userJson.firstName + <span class="string">' '</span> + userJson.lastName</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchCurrentUser</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> $.ajax(&#123;</div><div class="line">        <span class="attr">type</span>: <span class="string">'GET'</span>,</div><div class="line">        <span class="attr">url</span>: <span class="string">'http://example.com/currentUser'</span>,</div><div class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">userJson</span>) </span>&#123;</div><div class="line">            callback(parseUserJson(userJson));</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = fetchCurrentUser;</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">jest.dontMock(<span class="string">'../src/getUser'</span>);</div><div class="line">describe(<span class="string">'getUser'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//test right params</span></div><div class="line">    it(<span class="string">'calls into $.ajax with the correct params'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</div><div class="line">        <span class="keyword">var</span> getUser = <span class="built_in">require</span>(<span class="string">'../src/getUser'</span>);</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">dummyCallback</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">        getUser(dummyCallback);</div><div class="line">        <span class="comment">// Now make sure that $.ajax was properly called during the previous</span></div><div class="line">        <span class="comment">// 2 lines</span></div><div class="line">        expect($.ajax).toBeCalledWith(&#123;</div><div class="line">            <span class="attr">type</span>: <span class="string">'GET'</span>,</div><div class="line">            <span class="attr">url</span>: <span class="string">'http://example.com/currentUser'</span>,</div><div class="line">            <span class="attr">success</span>: jasmine.any(<span class="built_in">Function</span>)</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="comment">//test callback function</span></div><div class="line">    it(<span class="string">'calls the callback when $.ajax requests are finished'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</div><div class="line">        <span class="keyword">var</span> getUser = <span class="built_in">require</span>(<span class="string">'../src/getUser'</span>);</div><div class="line"></div><div class="line">        <span class="comment">//create mock function</span></div><div class="line">        <span class="keyword">var</span> callback = jest.genMockFunction();</div><div class="line">        getUser(callback);</div><div class="line"></div><div class="line">        <span class="comment">//xfunc.mock have interactions information</span></div><div class="line">        <span class="comment">//mock.calls.length call times</span></div><div class="line">        <span class="comment">//mock.calls[0][0] first param</span></div><div class="line">        <span class="comment">//mock.calls[0][1] second param</span></div><div class="line">        <span class="comment">//https://facebook.github.io/jest/docs/mock-functions.html</span></div><div class="line"></div><div class="line">        <span class="comment">//emulate the params pass to success</span></div><div class="line">        $.ajax.mock.calls[<span class="number">0</span>][<span class="number">0</span>].success(&#123;</div><div class="line">            <span class="attr">firstName</span>: <span class="string">'Bobby'</span>,</div><div class="line">            <span class="attr">lastName</span>: <span class="string">'");DROP TABLE Users;--'</span></div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        expect(callback.mock.calls[<span class="number">0</span>][<span class="number">0</span>]).toEqual(&#123;</div><div class="line">            <span class="attr">loggedIn</span>: <span class="literal">true</span>,</div><div class="line">            <span class="attr">fullName</span>: <span class="string">'Bobby ");DROP TABLE Users;--'</span></div><div class="line">        &#125;);</div><div class="line"></div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="React组件的单元测试实例"><a href="#React组件的单元测试实例" class="headerlink" title="React组件的单元测试实例"></a>React组件的单元测试实例</h2><p>假如我们有这样一个checkbox react组件, 如下, react的es6写法请参考我的blog-<a href="http://dj1211.com/?p=667" target="_blank">ES6的核心语法与应用</a><br>原理非常简单,点击checkbox切换label的状态.我们的测试代码如下, 使用了<a href="https://facebook.github.io/react/docs/test-utils.html" target="_blank">react-addons-test-utils</a>这个模块, 模块的renderIntoDocument用于将react组件渲染到document中,<br>并且支持产生模拟事件:TestUtils.Simulate.change.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Checkbox</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">isChecked</span>: <span class="literal">false</span>&#125;;</div><div class="line">        <span class="keyword">this</span>.changeState = <span class="keyword">this</span>.changeState.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    changeState () &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">isChecked</span>: !<span class="keyword">this</span>.state.isChecked&#125;)</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (&lt;label&gt;</div><div class="line">                &lt;input type="checkbox" checked=&#123;this.state.isChecked&#125; onChange=&#123;this.changeState&#125; /&gt;</div><div class="line">                &#123;this.state.isChecked ? this.props.labelOn : this.props.labelOff&#125;</div><div class="line">               &lt;/label&gt;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">export default Checkbox;</div></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> TestUtils <span class="keyword">from</span> <span class="string">'react-addons-test-utils'</span>;</div><div class="line"><span class="keyword">import</span> ReactDom <span class="keyword">from</span>  <span class="string">'react-dom'</span>;</div><div class="line">jest.dontMock(<span class="string">'../src/checkbox'</span>);</div><div class="line"><span class="keyword">const</span> Checkbox = <span class="built_in">require</span>(<span class="string">'../src/checkbox'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'test react checkbox component'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'change the label after click'</span>, () =&gt; &#123;</div><div class="line">        <span class="comment">//1 render component</span></div><div class="line">        <span class="comment">//2 get node label get default value off</span></div><div class="line">        <span class="comment">//3 simulate click</span></div><div class="line">        <span class="comment">//4 expect value equal on</span></div><div class="line"></div><div class="line">        <span class="comment">//TestUtils.renderIntoDocument method refers to https://facebook.github.io/react/docs/test-utils.html#renderintodocument</span></div><div class="line">        <span class="comment">//TestUtils.findRenderedDOMComponentWithTag https://facebook.github.io/react/docs/test-utils.html#findrendereddomcomponentwithtag</span></div><div class="line">        <span class="comment">//ReactDom API:findDOMNode render unmountComponentAtNode server-side:renderToString renderToStaticMarkup</span></div><div class="line"></div><div class="line">        <span class="keyword">var</span> checkbox = TestUtils.renderIntoDocument(&lt;Checkbox labelOn="On" labelOff="Off" /&gt;);</div><div class="line">        var checkboxNode = ReactDom.findDOMNode(checkbox);</div><div class="line">        //https://facebook.github.io/jest/docs/api.html#expect-value</div><div class="line">        expect(checkboxNode.textContent).toEqual('Off');</div><div class="line">        TestUtils.Simulate.change(TestUtils.findRenderedDOMComponentWithTag(checkbox, 'input'));</div><div class="line">        expect(checkboxNode.textContent).toEqual('On');</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="React组件的单元测试实例"><a href="#React组件的单元测试实例" class="headerlink" title="React组件的单元测试实例"></a>React组件的单元测试实例</h2><p>假如我们有这样一个checkbox react组件, 如下, react的es6写法请参考我的blog-<a href="http://dj1211.com/?p=667" target="_blank">ES6的核心语法与应用</a><br>原理非常简单,点击checkbox切换label的状态.我们的测试代码如下, 使用了<a href="https://facebook.github.io/react/docs/test-utils.html" target="_blank">react-addons-test-utils</a>这个模块, 模块的renderIntoDocument用于将react组件渲染到document中,<br>并且支持产生模拟事件:TestUtils.Simulate.change.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Checkbox</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">isChecked</span>: <span class="literal">false</span>&#125;;</div><div class="line">        <span class="keyword">this</span>.changeState = <span class="keyword">this</span>.changeState.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    changeState () &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">isChecked</span>: !<span class="keyword">this</span>.state.isChecked&#125;)</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span></div><div class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">checked</span>=<span class="string">&#123;this.state.isChecked&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;this.changeState&#125;</span> /&gt;</span></div><div class="line">                &#123;this.state.isChecked ? this.props.labelOn : this.props.labelOff&#125;</div><div class="line">               <span class="tag">&lt;/<span class="name">label</span>&gt;</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">export default Checkbox;</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> TestUtils <span class="keyword">from</span> <span class="string">'react-addons-test-utils'</span>;</div><div class="line"><span class="keyword">import</span> ReactDom <span class="keyword">from</span>  <span class="string">'react-dom'</span>;</div><div class="line">jest.dontMock(<span class="string">'../src/checkbox'</span>);</div><div class="line"><span class="keyword">const</span> Checkbox = <span class="built_in">require</span>(<span class="string">'../src/checkbox'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'test react checkbox component'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'change the label after click'</span>, () =&gt; &#123;</div><div class="line">        <span class="comment">//1 render component</span></div><div class="line">        <span class="comment">//2 get node label get default value off</span></div><div class="line">        <span class="comment">//3 simulate click</span></div><div class="line">        <span class="comment">//4 expect value equal on</span></div><div class="line"></div><div class="line">        <span class="comment">//TestUtils.renderIntoDocument method refers to https://facebook.github.io/react/docs/test-utils.html#renderintodocument</span></div><div class="line">        <span class="comment">//TestUtils.findRenderedDOMComponentWithTag https://facebook.github.io/react/docs/test-utils.html#findrendereddomcomponentwithtag</span></div><div class="line">        <span class="comment">//ReactDom API:findDOMNode render unmountComponentAtNode server-side:renderToString renderToStaticMarkup</span></div><div class="line"></div><div class="line">        <span class="keyword">var</span> checkbox = TestUtils.renderIntoDocument(<span class="xml"><span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">labelOn</span>=<span class="string">"On"</span> <span class="attr">labelOff</span>=<span class="string">"Off"</span> /&gt;</span>);</span></div><div class="line">        var checkboxNode = ReactDom.findDOMNode(checkbox);</div><div class="line">        //https://facebook.github.io/jest/docs/api.html#expect-value</div><div class="line">        expect(checkboxNode.textContent).toEqual('Off');</div><div class="line">        TestUtils.Simulate.change(TestUtils.findRenderedDOMComponentWithTag(checkbox, 'input'));</div><div class="line">        expect(checkboxNode.textContent).toEqual('On');</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>运行的时候我们需要通过babel预处理一下,通过如下的方式配置package.json即可运行:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"test"</span>: <span class="string">"jest"</span></div><div class="line">&#125;,</div><div class="line"><span class="string">"jest"</span>: &#123;</div><div class="line">  <span class="string">"scriptPreprocessor"</span>: <span class="string">"&lt;rootDir&gt;/node_modules/babel-jest"</span>,</div><div class="line">  <span class="string">"unmockedModulePathPatterns"</span>: [</div><div class="line">    <span class="string">"&lt;rootDir&gt;/node_modules/react"</span>,</div><div class="line">    <span class="string">"&lt;rootDir&gt;/node_modules/react-dom"</span>,</div><div class="line">    <span class="string">"&lt;rootDir&gt;/node_modules/react-addons-test-utils"</span></div><div class="line">  ],</div><div class="line">  <span class="string">"modulePathIgnorePatterns"</span>: [</div><div class="line">    <span class="string">"&lt;rootDir&gt;/node_modules/"</span></div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="手动mock"><a href="#手动mock" class="headerlink" title="手动mock"></a>手动mock</h2><p>经常我们需要模拟某个模块中的方法(此方法实现非常复杂依赖第三方的模块)用来测试另一个模块的输入输出是否正确,jest就提供非常方便的mock机制,例如,我们在A模块中依赖jquery的fx方法<br>而fx方法又依赖于其他方法, 因为我们只关心fx的输出,所以我们就可以直接用来模拟,方法如下:</p>
@@ -192,25 +192,25 @@
     
     </summary>
     
-      <category term="Uncategorized" scheme="https://mengbaby.github.io/categories/Uncategorized/"/>
+      <category term="Uncategorized" scheme="https://zhangmeng712.github.io/categories/Uncategorized/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="React" scheme="https://mengbaby.github.io/Mtags/React/"/>
+      <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
     
-      <category term="jest" scheme="https://mengbaby.github.io/Mtags/jest/"/>
+      <category term="jest" scheme="https://zhangmeng712.github.io/Mtags/jest/"/>
     
-      <category term="前端单元测试" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="前端单元测试" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>ES6的核心语法与应用</title>
-    <link href="https://mengbaby.github.io/2016/01/24/es6-basic/"/>
-    <id>https://mengbaby.github.io/2016/01/24/es6-basic/</id>
+    <link href="https://zhangmeng712.github.io/2016/01/24/es6-basic/"/>
+    <id>https://zhangmeng712.github.io/2016/01/24/es6-basic/</id>
     <published>2016-01-24T06:28:03.000Z</published>
     <updated>2017-04-17T07:22:29.000Z</updated>
     
@@ -252,23 +252,23 @@
     
     </summary>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/categories/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/categories/javascript/"/>
     
-      <category term="es6" scheme="https://mengbaby.github.io/categories/javascript/es6/"/>
+      <category term="es6" scheme="https://zhangmeng712.github.io/categories/javascript/es6/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="ES6" scheme="https://mengbaby.github.io/Mtags/ES6/"/>
+      <category term="ES6" scheme="https://zhangmeng712.github.io/Mtags/ES6/"/>
     
-      <category term="React" scheme="https://mengbaby.github.io/Mtags/React/"/>
+      <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
     
   </entry>
   
   <entry>
     <title>前端自动化测试之单元测试（一）—— polymer组件的测试工具</title>
-    <link href="https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/"/>
-    <id>https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/</id>
+    <link href="https://zhangmeng712.github.io/2015/12/31/f2e-testing-polymer/"/>
+    <id>https://zhangmeng712.github.io/2015/12/31/f2e-testing-polymer/</id>
     <published>2015-12-30T20:04:54.000Z</published>
     <updated>2017-04-17T05:55:31.000Z</updated>
     
@@ -459,27 +459,27 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="Uncategorized" scheme="https://mengbaby.github.io/categories/Uncategorized/"/>
+      <category term="Uncategorized" scheme="https://zhangmeng712.github.io/categories/Uncategorized/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="前端单元测试" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="前端单元测试" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="polymer" scheme="https://mengbaby.github.io/Mtags/polymer/"/>
+      <category term="polymer" scheme="https://zhangmeng712.github.io/Mtags/polymer/"/>
     
-      <category term="unit test" scheme="https://mengbaby.github.io/Mtags/unit-test/"/>
+      <category term="unit test" scheme="https://zhangmeng712.github.io/Mtags/unit-test/"/>
     
-      <category term="web components" scheme="https://mengbaby.github.io/Mtags/web-components/"/>
+      <category term="web components" scheme="https://zhangmeng712.github.io/Mtags/web-components/"/>
     
-      <category term="web-components-tester" scheme="https://mengbaby.github.io/Mtags/web-components-tester/"/>
+      <category term="web-components-tester" scheme="https://zhangmeng712.github.io/Mtags/web-components-tester/"/>
     
   </entry>
   
   <entry>
     <title>前端自动化测试基础-sinon篇章</title>
-    <link href="https://mengbaby.github.io/2015/12/26/f2e-testing-sion/"/>
-    <id>https://mengbaby.github.io/2015/12/26/f2e-testing-sion/</id>
+    <link href="https://zhangmeng712.github.io/2015/12/26/f2e-testing-sion/"/>
+    <id>https://zhangmeng712.github.io/2015/12/26/f2e-testing-sion/</id>
     <published>2015-12-26T05:10:16.000Z</published>
     <updated>2017-04-17T07:20:04.000Z</updated>
     
@@ -571,23 +571,23 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/categories/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/categories/nodejs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="sinon" scheme="https://mengbaby.github.io/Mtags/sinon/"/>
+      <category term="sinon" scheme="https://zhangmeng712.github.io/Mtags/sinon/"/>
     
   </entry>
   
   <entry>
     <title>响应式设计的自动化测试</title>
-    <link href="https://mengbaby.github.io/2015/11/22/f2e-testing-responsive/"/>
-    <id>https://mengbaby.github.io/2015/11/22/f2e-testing-responsive/</id>
+    <link href="https://zhangmeng712.github.io/2015/11/22/f2e-testing-responsive/"/>
+    <id>https://zhangmeng712.github.io/2015/11/22/f2e-testing-responsive/</id>
     <published>2015-11-21T23:26:47.000Z</published>
     <updated>2017-04-17T07:19:28.000Z</updated>
     
@@ -803,33 +803,33 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/categories/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/categories/nodejs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
-      <category term="responsive design" scheme="https://mengbaby.github.io/categories/nodejs/testing/responsive-design/"/>
+      <category term="responsive design" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/responsive-design/"/>
     
     
-      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
+      <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="css3" scheme="https://mengbaby.github.io/Mtags/css3/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
     
-      <category term="galenframework" scheme="https://mengbaby.github.io/Mtags/galenframework/"/>
+      <category term="galenframework" scheme="https://zhangmeng712.github.io/Mtags/galenframework/"/>
     
-      <category term="responsive design" scheme="https://mengbaby.github.io/Mtags/responsive-design/"/>
+      <category term="responsive design" scheme="https://zhangmeng712.github.io/Mtags/responsive-design/"/>
     
-      <category term="UI自动化测试" scheme="https://mengbaby.github.io/Mtags/UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="UI自动化测试" scheme="https://zhangmeng712.github.io/Mtags/UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="响应式设计" scheme="https://mengbaby.github.io/Mtags/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
+      <category term="响应式设计" scheme="https://zhangmeng712.github.io/Mtags/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>前端自动化测试基础-断言篇：chai和chai插件的用法</title>
-    <link href="https://mengbaby.github.io/2015/11/11/f2e-testing-assert/"/>
-    <id>https://mengbaby.github.io/2015/11/11/f2e-testing-assert/</id>
+    <link href="https://zhangmeng712.github.io/2015/11/11/f2e-testing-assert/"/>
+    <id>https://zhangmeng712.github.io/2015/11/11/f2e-testing-assert/</id>
     <published>2015-11-11T06:32:50.000Z</published>
     <updated>2017-04-17T07:46:39.000Z</updated>
     
@@ -973,33 +973,33 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/categories/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/categories/javascript/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/javascript/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/javascript/testing/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="chai" scheme="https://mengbaby.github.io/Mtags/chai/"/>
+      <category term="chai" scheme="https://zhangmeng712.github.io/Mtags/chai/"/>
     
-      <category term="mocha" scheme="https://mengbaby.github.io/Mtags/mocha/"/>
+      <category term="chai as promise" scheme="https://zhangmeng712.github.io/Mtags/chai-as-promise/"/>
     
-      <category term="chai as promise" scheme="https://mengbaby.github.io/Mtags/chai-as-promise/"/>
+      <category term="mocha" scheme="https://zhangmeng712.github.io/Mtags/mocha/"/>
     
-      <category term="ui测试" scheme="https://mengbaby.github.io/Mtags/ui%E6%B5%8B%E8%AF%95/"/>
+      <category term="ui测试" scheme="https://zhangmeng712.github.io/Mtags/ui%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="单元测试" scheme="https://mengbaby.github.io/Mtags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="https://zhangmeng712.github.io/Mtags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="断言" scheme="https://mengbaby.github.io/Mtags/%E6%96%AD%E8%A8%80/"/>
+      <category term="断言" scheme="https://zhangmeng712.github.io/Mtags/%E6%96%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>Appium的源码编译安装</title>
-    <link href="https://mengbaby.github.io/2015/10/22/appium-install/"/>
-    <id>https://mengbaby.github.io/2015/10/22/appium-install/</id>
+    <link href="https://zhangmeng712.github.io/2015/10/22/appium-install/"/>
+    <id>https://zhangmeng712.github.io/2015/10/22/appium-install/</id>
     <published>2015-10-22T01:08:14.000Z</published>
     <updated>2017-04-17T05:59:55.000Z</updated>
     
@@ -1087,29 +1087,29 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/categories/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/categories/nodejs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="android" scheme="https://mengbaby.github.io/Mtags/android/"/>
+      <category term="android" scheme="https://zhangmeng712.github.io/Mtags/android/"/>
     
-      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
+      <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
     
-      <category term="ios" scheme="https://mengbaby.github.io/Mtags/ios/"/>
+      <category term="ios" scheme="https://zhangmeng712.github.io/Mtags/ios/"/>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>前端自动化测试基础-mocha篇</title>
-    <link href="https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/"/>
-    <id>https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/</id>
+    <link href="https://zhangmeng712.github.io/2015/10/13/f2e-testing-mocha/"/>
+    <id>https://zhangmeng712.github.io/2015/10/13/f2e-testing-mocha/</id>
     <published>2015-10-13T00:05:22.000Z</published>
     <updated>2017-04-17T07:16:45.000Z</updated>
     
@@ -1161,31 +1161,31 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="nodjs" scheme="https://mengbaby.github.io/categories/nodjs/"/>
+      <category term="nodjs" scheme="https://zhangmeng712.github.io/categories/nodjs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodjs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodjs/testing/"/>
     
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="前端" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="chai" scheme="https://zhangmeng712.github.io/Mtags/chai/"/>
     
-      <category term="bdd" scheme="https://mengbaby.github.io/Mtags/bdd/"/>
+      <category term="mocha" scheme="https://zhangmeng712.github.io/Mtags/mocha/"/>
     
-      <category term="chai" scheme="https://mengbaby.github.io/Mtags/chai/"/>
+      <category term="前端" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="mocha" scheme="https://mengbaby.github.io/Mtags/mocha/"/>
+      <category term="bdd" scheme="https://zhangmeng712.github.io/Mtags/bdd/"/>
     
-      <category term="异步" scheme="https://mengbaby.github.io/Mtags/%E5%BC%82%E6%AD%A5/"/>
+      <category term="异步" scheme="https://zhangmeng712.github.io/Mtags/%E5%BC%82%E6%AD%A5/"/>
     
   </entry>
   
   <entry>
     <title>前端UI自动化测试</title>
-    <link href="https://mengbaby.github.io/2015/10/08/f2e-testing-basic/"/>
-    <id>https://mengbaby.github.io/2015/10/08/f2e-testing-basic/</id>
+    <link href="https://zhangmeng712.github.io/2015/10/08/f2e-testing-basic/"/>
+    <id>https://zhangmeng712.github.io/2015/10/08/f2e-testing-basic/</id>
     <published>2015-10-07T22:41:01.000Z</published>
     <updated>2017-04-17T07:13:37.000Z</updated>
     
@@ -1317,33 +1317,33 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/categories/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/categories/nodejs/"/>
     
-      <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
+      <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
+      <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+      <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="selenium" scheme="https://mengbaby.github.io/Mtags/selenium/"/>
+      <category term="selenium" scheme="https://zhangmeng712.github.io/Mtags/selenium/"/>
     
-      <category term="UI" scheme="https://mengbaby.github.io/Mtags/UI/"/>
+      <category term="UI" scheme="https://zhangmeng712.github.io/Mtags/UI/"/>
     
-      <category term="wd.js" scheme="https://mengbaby.github.io/Mtags/wd-js/"/>
+      <category term="wd.js" scheme="https://zhangmeng712.github.io/Mtags/wd-js/"/>
     
-      <category term="webdriver" scheme="https://mengbaby.github.io/Mtags/webdriver/"/>
+      <category term="webdriver" scheme="https://zhangmeng712.github.io/Mtags/webdriver/"/>
     
-      <category term="前端" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>browserify和webpack快速配置入门教程</title>
-    <link href="https://mengbaby.github.io/2015/09/21/browserify-and-webpack/"/>
-    <id>https://mengbaby.github.io/2015/09/21/browserify-and-webpack/</id>
+    <link href="https://zhangmeng712.github.io/2015/09/21/browserify-and-webpack/"/>
+    <id>https://zhangmeng712.github.io/2015/09/21/browserify-and-webpack/</id>
     <published>2015-09-21T01:04:12.000Z</published>
     <updated>2017-04-17T06:05:28.000Z</updated>
     
@@ -1409,31 +1409,31 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/categories/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/categories/javascript/"/>
     
-      <category term="workflow" scheme="https://mengbaby.github.io/categories/javascript/workflow/"/>
+      <category term="workflow" scheme="https://zhangmeng712.github.io/categories/javascript/workflow/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
-      <category term="browserify" scheme="https://mengbaby.github.io/Mtags/browserify/"/>
+      <category term="browserify" scheme="https://zhangmeng712.github.io/Mtags/browserify/"/>
     
-      <category term="webpack" scheme="https://mengbaby.github.io/Mtags/webpack/"/>
+      <category term="webpack" scheme="https://zhangmeng712.github.io/Mtags/webpack/"/>
     
-      <category term="前端自动化部署" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
+      <category term="前端自动化部署" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
     
-      <category term="工具" scheme="https://mengbaby.github.io/Mtags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://zhangmeng712.github.io/Mtags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="敏捷开发" scheme="https://mengbaby.github.io/Mtags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
+      <category term="敏捷开发" scheme="https://zhangmeng712.github.io/Mtags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>React生命周期、API和深入用法</title>
-    <link href="https://mengbaby.github.io/2015/09/06/react-depth/"/>
-    <id>https://mengbaby.github.io/2015/09/06/react-depth/</id>
+    <link href="https://zhangmeng712.github.io/2015/09/06/react-depth/"/>
+    <id>https://zhangmeng712.github.io/2015/09/06/react-depth/</id>
     <published>2015-09-06T03:04:22.000Z</published>
     <updated>2017-04-17T07:55:18.000Z</updated>
     
@@ -1607,19 +1607,19 @@ suite('markers default', function () {
     
     </summary>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/categories/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/categories/javascript/"/>
     
-      <category term="react" scheme="https://mengbaby.github.io/categories/javascript/react/"/>
+      <category term="react" scheme="https://zhangmeng712.github.io/categories/javascript/react/"/>
     
     
-      <category term="React" scheme="https://mengbaby.github.io/Mtags/React/"/>
+      <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
     
   </entry>
   
   <entry>
     <title>mobile H5布局大全-rem flexbox详解</title>
-    <link href="https://mengbaby.github.io/2015/03/15/mobile-layout/"/>
-    <id>https://mengbaby.github.io/2015/03/15/mobile-layout/</id>
+    <link href="https://zhangmeng712.github.io/2015/03/15/mobile-layout/"/>
+    <id>https://zhangmeng712.github.io/2015/03/15/mobile-layout/</id>
     <published>2015-03-15T01:29:14.000Z</published>
     <updated>2017-04-17T07:21:17.000Z</updated>
     
@@ -1816,31 +1816,31 @@ align-items:center;
     
     </summary>
     
-      <category term="css3" scheme="https://mengbaby.github.io/categories/css3/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/categories/css3/"/>
     
-      <category term="h5" scheme="https://mengbaby.github.io/categories/css3/h5/"/>
+      <category term="h5" scheme="https://zhangmeng712.github.io/categories/css3/h5/"/>
     
-      <category term="mobile" scheme="https://mengbaby.github.io/categories/css3/h5/mobile/"/>
+      <category term="mobile" scheme="https://zhangmeng712.github.io/categories/css3/h5/mobile/"/>
     
     
-      <category term="css3" scheme="https://mengbaby.github.io/Mtags/css3/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
     
-      <category term="flexbox" scheme="https://mengbaby.github.io/Mtags/flexbox/"/>
+      <category term="flexbox" scheme="https://zhangmeng712.github.io/Mtags/flexbox/"/>
     
-      <category term="mobile" scheme="https://mengbaby.github.io/Mtags/mobile/"/>
+      <category term="mobile" scheme="https://zhangmeng712.github.io/Mtags/mobile/"/>
     
-      <category term="mobile-layout" scheme="https://mengbaby.github.io/Mtags/mobile-layout/"/>
+      <category term="mobile-layout" scheme="https://zhangmeng712.github.io/Mtags/mobile-layout/"/>
     
-      <category term="rem" scheme="https://mengbaby.github.io/Mtags/rem/"/>
+      <category term="rem" scheme="https://zhangmeng712.github.io/Mtags/rem/"/>
     
-      <category term="viewport" scheme="https://mengbaby.github.io/Mtags/viewport/"/>
+      <category term="viewport" scheme="https://zhangmeng712.github.io/Mtags/viewport/"/>
     
   </entry>
   
   <entry>
     <title>css3和动画-part1-变换</title>
-    <link href="https://mengbaby.github.io/2015/02/03/css3-animation-part1/"/>
-    <id>https://mengbaby.github.io/2015/02/03/css3-animation-part1/</id>
+    <link href="https://zhangmeng712.github.io/2015/02/03/css3-animation-part1/"/>
+    <id>https://zhangmeng712.github.io/2015/02/03/css3-animation-part1/</id>
     <published>2015-02-03T03:15:22.000Z</published>
     <updated>2017-04-17T06:26:29.000Z</updated>
     
@@ -1924,16 +1924,16 @@ scale最常见的应用就是在鼠标hover的时候把图标进行放大，以�
     
     </summary>
     
-      <category term="javascript" scheme="https://mengbaby.github.io/categories/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/categories/javascript/"/>
     
-      <category term="css3" scheme="https://mengbaby.github.io/categories/javascript/css3/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/categories/javascript/css3/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="css3" scheme="https://mengbaby.github.io/Mtags/css3/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
     
-      <category term="html5" scheme="https://mengbaby.github.io/Mtags/html5/"/>
+      <category term="html5" scheme="https://zhangmeng712.github.io/Mtags/html5/"/>
     
   </entry>
   
