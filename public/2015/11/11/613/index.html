@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>前端自动化测试基础-断言篇：chai和chai插件的用法 | 萌小主前端部落 | the more you know the more you know you don&#39;t know</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="javascript,自动化测试,chai,chai as promise,mocha,ui测试,单元测试,断言">
+    <meta name="description" content="chai概念 测试技术的断言框架。 特点 支持多种BDD/TDD断言语法 BDD：should BDD：expect TDD：assert   可用在browser端和node端。 可以和很多测试框架结合例如mocha jasmine等进行单元和UI测试。  安装1npm install chai 用法browser端12345&amp;lt;script src=&quot;//cdn.bootcss.com/c">
+<meta name="keywords" content="javascript,自动化测试,chai,chai as promise,mocha,ui测试,单元测试,断言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端自动化测试基础-断言篇：chai和chai插件的用法">
+<meta property="og:url" content="https://mengbaby.github.io/2015/11/11/613/index.html">
+<meta property="og:site_name" content="萌小主前端部落">
+<meta property="og:description" content="chai概念 测试技术的断言框架。 特点 支持多种BDD/TDD断言语法 BDD：should BDD：expect TDD：assert   可用在browser端和node端。 可以和很多测试框架结合例如mocha jasmine等进行单元和UI测试。  安装1npm install chai 用法browser端12345&amp;lt;script src=&quot;//cdn.bootcss.com/c">
+<meta property="og:updated_time" content="2017-04-17T07:46:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端自动化测试基础-断言篇：chai和chai插件的用法">
+<meta name="twitter:description" content="chai概念 测试技术的断言框架。 特点 支持多种BDD/TDD断言语法 BDD：should BDD：expect TDD：assert   可用在browser端和node端。 可以和很多测试框架结合例如mocha jasmine等进行单元和UI测试。  安装1npm install chai 用法browser端12345&amp;lt;script src=&quot;//cdn.bootcss.com/c">
+    
+        <link rel="alternate" type="application/atom+xml" title="萌小主前端部落" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpeg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Dr Meng</h5>
+          <a href="mailto:zhangmeng712@gmail.com" title="zhangmeng712@gmail.com" class="mail">zhangmeng712@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhangmeng712"  >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端自动化测试基础-断言篇：chai和chai插件的用法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端自动化测试基础-断言篇：chai和chai插件的用法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2015-11-11T06:32:50.000Z" itemprop="datePublished" class="page-time">
+  2015-11-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/testing/">testing</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chai"><span class="post-toc-number">1.</span> <span class="post-toc-text">chai</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#browser端"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">browser端</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#node端"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">node端</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#expect用法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">expect用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#should用法"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">should用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#assert"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">assert</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#chai-as-promise用法"><span class="post-toc-number">2.</span> <span class="post-toc-text">chai as promise用法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sinon-chai用法"><span class="post-toc-number">3.</span> <span class="post-toc-text">sinon-chai用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#chai和mocha结合的测试用例"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">chai和mocha结合的测试用例</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-f2e-testing-assert"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端自动化测试基础-断言篇：chai和chai插件的用法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2015-11-11 14:32:50" datetime="2015-11-11T06:32:50.000Z"  itemprop="datePublished">2015-11-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/testing/">testing</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="chai"><a href="#chai" class="headerlink" title="chai"></a>chai</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p> 测试技术的断言框架。</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>支持多种BDD/TDD断言语法<ul>
+<li>BDD：should</li>
+<li>BDD：expect</li>
+<li>TDD：assert</li>
+</ul>
+</li>
+<li>可用在browser端和node端。</li>
+<li>可以和很多测试框架结合例如mocha jasmine等进行单元和UI测试。</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install chai</div></pre></td></tr></table></figure>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><h4 id="browser端"><a href="#browser端" class="headerlink" title="browser端"></a>browser端</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.bootcss.com/chai/3.4.0/chai.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="comment">//expect为全局的函数</span></div><div class="line">   expect(foo).to.not.equal(<span class="string">'bar'</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="node端"><a href="#node端" class="headerlink" title="node端"></a>node端</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">'chai'</span>),</div><div class="line">    expect = chai.expect;</div><div class="line">chai.should();</div></pre></td></tr></table></figure>
+<h3 id="expect用法"><a href="#expect用法" class="headerlink" title="expect用法"></a>expect用法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//------------------ 连接词用法 -----------------</span></div><div class="line"><span class="comment">//not用法 expect().not.to.</span></div><div class="line">expect(foo).to.not.equal(<span class="string">'bar'</span>);</div><div class="line">expect(goodFn).to.not.throw(<span class="built_in">Error</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="string">'baz'</span> &#125;).to.have.property(<span class="string">'foo'</span>).and.not.equal(<span class="string">'bar'</span>);</div><div class="line"></div><div class="line"><span class="comment">//deep用法 expect(foo).to.deep. 通常和equal连用，判断object的相等需要用deep</span></div><div class="line">expect(foo).to.deep.equal(&#123; <span class="attr">bar</span>: <span class="string">'baz'</span> &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//any用法 用在keys的判断上</span></div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.any.keys(<span class="string">'foo'</span>, <span class="string">'baz'</span>);</div><div class="line"></div><div class="line"><span class="comment">// all用法 用在keys的判断上</span></div><div class="line">expect(foo).to.have.all.keys(<span class="string">'bar'</span>, <span class="string">'baz'</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.all.keys([<span class="string">'bar'</span>, <span class="string">'foo'</span>]);</div><div class="line"></div><div class="line"><span class="comment">//a 判断typeof 或者 language chain</span></div><div class="line"><span class="comment">// typeof</span></div><div class="line">expect(<span class="string">'test'</span>).to.be.a(<span class="string">'string'</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;).to.be.an(<span class="string">'object'</span>);</div><div class="line">expect(<span class="literal">null</span>).to.be.a(<span class="string">'null'</span>);</div><div class="line">expect(<span class="literal">undefined</span>).to.be.an(<span class="string">'undefined'</span>);</div><div class="line"></div><div class="line"><span class="comment">// language chain</span></div><div class="line">expect(foo).to.be.an.instanceof(Foo);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//---------------------判断bool----------------------</span></div><div class="line"><span class="comment">//bool</span></div><div class="line"><span class="comment">// 1 truthy</span></div><div class="line">expect(<span class="string">'everthing'</span>).to.be.ok;</div><div class="line">expect(<span class="number">1</span>).to.be.ok;</div><div class="line">expect(<span class="literal">false</span>).to.not.be.ok;</div><div class="line">expect(<span class="literal">undefined</span>).to.not.be.ok;</div><div class="line">expect(<span class="literal">null</span>).to.not.be.ok;</div><div class="line"></div><div class="line"><span class="comment">//2 true</span></div><div class="line">expect(<span class="literal">true</span>).to.be.true;</div><div class="line">expect(<span class="number">1</span>).to.not.be.true;</div><div class="line"></div><div class="line"><span class="comment">//3 false</span></div><div class="line">expect(<span class="literal">false</span>).to.be.false;</div><div class="line">expect(<span class="number">0</span>).to.not.be.false;</div><div class="line"></div><div class="line"><span class="comment">//4 null</span></div><div class="line">expect(<span class="literal">null</span>).to.be.null;</div><div class="line">expect(<span class="literal">undefined</span>).not.to.be.null;</div><div class="line"></div><div class="line"><span class="comment">// 5 undefined</span></div><div class="line">expect(<span class="literal">undefined</span>).to.be.undefined;</div><div class="line">expect(<span class="literal">null</span>).to.not.be.undefined;</div><div class="line"></div><div class="line"><span class="comment">//6 exist</span></div><div class="line"><span class="keyword">var</span> foo = <span class="string">'hi'</span></div><div class="line">  , bar = <span class="literal">null</span></div><div class="line">  , baz;</div><div class="line"></div><div class="line">expect(foo).to.exist;</div><div class="line">expect(bar).to.not.exist;</div><div class="line">expect(baz).to.not.exist;</div><div class="line"></div><div class="line"><span class="comment">//7 expty</span></div><div class="line">expect([]).to.be.empty;</div><div class="line">expect(<span class="string">''</span>).to.be.empty;</div><div class="line">expect(&#123;&#125;).to.be.empty;</div><div class="line"></div><div class="line"><span class="comment">//------------------------判断函数参数---------------------------</span></div><div class="line"><span class="comment">// arguments</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  expect(<span class="built_in">arguments</span>).to.be.arguments;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//------------------------判断相等和大小关系--------------------------------</span></div><div class="line"><span class="comment">// equal if the deep flag is set, </span></div><div class="line"><span class="comment">// attention: asserts that the target is deeply equal to value.</span></div><div class="line">expect(<span class="string">'hello'</span>).to.equal(<span class="string">'hello'</span>);</div><div class="line">expect(<span class="number">42</span>).to.equal(<span class="number">42</span>);</div><div class="line">expect(<span class="number">1</span>).to.not.equal(<span class="literal">true</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;).to.not.equal(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;).to.deep.equal(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// eql: 判断值等</span></div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;).to.eql(&#123; <span class="attr">foo</span>: <span class="string">'bar'</span> &#125;);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.eql([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]);</div><div class="line"></div><div class="line"><span class="comment">//.above：大于</span></div><div class="line"></div><div class="line">expect(<span class="number">10</span>).to.be.above(<span class="number">5</span>);</div><div class="line">expect(<span class="string">'foo'</span>).to.have.length.above(<span class="number">2</span>);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.have.length.above(<span class="number">2</span>);</div><div class="line"></div><div class="line"><span class="comment">//least 至少</span></div><div class="line">expect(<span class="string">'foo'</span>).to.have.length.of.at.least(<span class="number">2</span>);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.have.length.of.at.least(<span class="number">3</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//below 低于</span></div><div class="line">expect(<span class="number">5</span>).to.be.below(<span class="number">10</span>);</div><div class="line">expect(<span class="string">'foo'</span>).to.have.length.below(<span class="number">4</span>);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.have.length.below(<span class="number">4</span>);</div><div class="line"></div><div class="line"><span class="comment">//most 最大为</span></div><div class="line">expect(<span class="number">5</span>).to.be.at.most(<span class="number">5</span>);</div><div class="line">expect(<span class="string">'foo'</span>).to.have.length.of.at.most(<span class="number">4</span>);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.have.length.of.at.most(<span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="comment">//.within(start, finish)在什么区间内</span></div><div class="line">expect(<span class="number">7</span>).to.be.within(<span class="number">5</span>,<span class="number">10</span>);</div><div class="line">expect(<span class="string">'foo'</span>).to.have.length.within(<span class="number">2</span>,<span class="number">4</span>);</div><div class="line">expect([ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]).to.have.length.within(<span class="number">2</span>,<span class="number">4</span>);</div><div class="line"></div><div class="line"><span class="comment">//.closeTo(expected, delta)</span></div><div class="line">expect(<span class="number">1.5</span>).to.be.closeTo(<span class="number">1</span>, <span class="number">0.5</span>);</div><div class="line"></div><div class="line"><span class="comment">//------------------正则---------------</span></div><div class="line"></div><div class="line"><span class="comment">//match(regexp)</span></div><div class="line">expect(<span class="string">'foobar'</span>).to.match(<span class="regexp">/^foo/</span>);</div><div class="line"></div><div class="line"><span class="comment">//-----------------字符串-------------</span></div><div class="line"><span class="comment">//string 判断含有某字符串</span></div><div class="line">expect(<span class="string">'foobar'</span>).to.have.string(<span class="string">'bar'</span>);</div><div class="line"></div><div class="line"><span class="comment">//----------------throw---------------</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> err = <span class="keyword">new</span> <span class="built_in">ReferenceError</span>(<span class="string">'This is a bad function.'</span>);</div><div class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">throw</span> err; &#125;</div><div class="line">expect(fn).to.throw(<span class="built_in">ReferenceError</span>);</div><div class="line">expect(fn).to.throw(<span class="built_in">Error</span>);</div><div class="line">expect(fn).to.throw(<span class="regexp">/bad function/</span>);</div><div class="line">expect(fn).to.not.throw(<span class="string">'good function'</span>);</div><div class="line">expect(fn).to.throw(<span class="built_in">ReferenceError</span>, /bad <span class="function"><span class="keyword">function</span>/);</span></div><div class="line"><span class="title">expect</span>(<span class="params">fn</span>).<span class="title">to</span>.<span class="title">throw</span>(<span class="params">err</span>);</div><div class="line"><span class="title">expect</span>(<span class="params">fn</span>).<span class="title">to</span>.<span class="title">not</span>.<span class="title">throw</span>(<span class="params">new RangeError(<span class="string">'Out of range.'</span></span>));</div><div class="line"></div><div class="line">//------------------------<span class="title">object</span>相关判断-------------------------</div><div class="line">//<span class="title">deep</span> &amp; <span class="title">property</span>属性</div><div class="line"><span class="title">expect</span>(<span class="params">foo</span>).<span class="title">to</span>.<span class="title">deep</span>.<span class="title">equal</span>(<span class="params">&#123; bar: <span class="string">'baz'</span> &#125;</span>);</div><div class="line"><span class="title">expect</span>(<span class="params">&#123; foo: &#123; bar: &#123; baz: <span class="string">'quux'</span> &#125; &#125; &#125;</span>).<span class="title">to</span>.<span class="title">have</span>.<span class="title">deep</span>.<span class="title">property</span>(<span class="params"><span class="string">'foo.bar.baz'</span>, <span class="string">'quux'</span></span>);</div><div class="line"></div><div class="line"></div><div class="line">// <span class="title">typeof</span></div><div class="line"><span class="title">expect</span>(<span class="params"><span class="string">'test'</span></span>).<span class="title">to</span>.<span class="title">be</span>.<span class="title">a</span>(<span class="params"><span class="string">'string'</span></span>);</div><div class="line"><span class="title">expect</span>(<span class="params">&#123; foo: <span class="string">'bar'</span> &#125;</span>).<span class="title">to</span>.<span class="title">be</span>.<span class="title">an</span>(<span class="params"><span class="string">'object'</span></span>);</div><div class="line"><span class="title">expect</span>(<span class="params">null</span>).<span class="title">to</span>.<span class="title">be</span>.<span class="title">a</span>(<span class="params"><span class="string">'null'</span></span>);</div><div class="line"><span class="title">expect</span>(<span class="params">undefined</span>).<span class="title">to</span>.<span class="title">be</span>.<span class="title">an</span>(<span class="params"><span class="string">'undefined'</span></span>);</div><div class="line"></div><div class="line">// <span class="title">language</span> <span class="title">chain</span></div><div class="line"><span class="title">expect</span>(<span class="params">foo</span>).<span class="title">to</span>.<span class="title">be</span>.<span class="title">an</span>.<span class="title">instanceof</span>(<span class="params">Foo</span>);</div><div class="line"></div><div class="line">// <span class="title">include</span></div><div class="line"><span class="title">expect</span>(<span class="params">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span>).<span class="title">to</span>.<span class="title">include</span>(<span class="params"><span class="number">2</span></span>);</div><div class="line"><span class="title">expect</span>(<span class="params"><span class="string">'foobar'</span></span>).<span class="title">to</span>.<span class="title">contain</span>(<span class="params"><span class="string">'foo'</span></span>);</div><div class="line"><span class="title">expect</span>(<span class="params">&#123; foo: <span class="string">'bar'</span>, hello: <span class="string">'universe'</span> &#125;</span>).<span class="title">to</span>.<span class="title">include</span>.<span class="title">keys</span>(<span class="params"><span class="string">'foo'</span></span>);</div><div class="line"></div><div class="line">// <span class="title">members</span> 判断数组成员</div><div class="line"><span class="title">expect</span>(<span class="params">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span>).<span class="title">to</span>.<span class="title">include</span>.<span class="title">members</span>(<span class="params">[<span class="number">3</span>, <span class="number">2</span>]</span>);</div><div class="line"><span class="title">expect</span>(<span class="params">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span>).<span class="title">to</span>.<span class="title">not</span>.<span class="title">include</span>.<span class="title">members</span>(<span class="params">[<span class="number">3</span>, <span class="number">2</span>, <span class="number">8</span>]</span>);</div><div class="line"></div><div class="line"><span class="title">expect</span>(<span class="params">[<span class="number">4</span>, <span class="number">2</span>]</span>).<span class="title">to</span>.<span class="title">have</span>.<span class="title">members</span>(<span class="params">[<span class="number">2</span>, <span class="number">4</span>]</span>);</div><div class="line"><span class="title">expect</span>(<span class="params">[<span class="number">5</span>, <span class="number">2</span>]</span>).<span class="title">to</span>.<span class="title">not</span>.<span class="title">have</span>.<span class="title">members</span>(<span class="params">[<span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>]</span>);</div><div class="line"><span class="title">expect</span>(<span class="params">[&#123; id: <span class="number">1</span> &#125;]</span>).<span class="title">to</span>.<span class="title">deep</span>.<span class="title">include</span>.<span class="title">members</span>(<span class="params">[&#123; id: <span class="number">1</span> &#125;]</span>);</div><div class="line"></div><div class="line"></div><div class="line">//<span class="title">respondTo</span>(<span class="params">method</span>) 判断是否是原型方法</div><div class="line"><span class="title">Klass</span>.<span class="title">prototype</span>.<span class="title">bar</span> = <span class="title">function</span>(<span class="params"></span>)&#123;&#125;;</div><div class="line">expect(Klass).to.respondTo(<span class="string">'bar'</span>);</div><div class="line">expect(obj).to.respondTo(<span class="string">'bar'</span>);</div><div class="line"></div><div class="line">Klass.baz = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">expect(Klass).itself.to.respondTo(<span class="string">'baz'</span>);</div><div class="line"></div><div class="line"><span class="comment">//itself和respondTo结合起来判断是否是原型链的方法还是自身的方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">Foo.bar = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">Foo.prototype.baz = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"></div><div class="line">expect(Foo).itself.to.respondTo(<span class="string">'bar'</span>);</div><div class="line">expect(Foo).itself.not.to.respondTo(<span class="string">'baz'</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//change 判断函数是否改变了对象的属性值</span></div><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">val</span>: <span class="number">10</span> &#125;;</div><div class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; obj.val += <span class="number">3</span> &#125;;</div><div class="line"><span class="keyword">var</span> noChangeFn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">'foo'</span> + <span class="string">'bar'</span>; &#125;</div><div class="line">expect(fn).to.change(obj, <span class="string">'val'</span>);</div><div class="line">expect(noChangFn).to.not.change(obj, <span class="string">'val'</span>)</div><div class="line"></div><div class="line"><span class="comment">//increase(function) 函数是否升高了属性值</span></div><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">val</span>: <span class="number">10</span> &#125;;</div><div class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; obj.val = <span class="number">15</span> &#125;;</div><div class="line">expect(fn).to.increase(obj, <span class="string">'val'</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//.decrease(function) 函数是否降低了属性值</span></div><div class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">val</span>: <span class="number">10</span> &#125;;</div><div class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; obj.val = <span class="number">5</span> &#125;;</div><div class="line">expect(fn).to.decrease(obj, <span class="string">'val'</span>);</div><div class="line"></div><div class="line"><span class="comment">//keys.判断是否object含有某项属性</span></div><div class="line"><span class="comment">//Note, either any or all should be used in the assertion. If neither are used, the assertion is defaulted to all.</span></div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.any.keys(<span class="string">'foo'</span>, <span class="string">'baz'</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.any.keys(<span class="string">'foo'</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.contain.any.keys(<span class="string">'bar'</span>, <span class="string">'baz'</span>);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.contain.any.keys([<span class="string">'foo'</span>]);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.contain.any.keys(&#123;<span class="string">'foo'</span>: <span class="number">6</span>&#125;);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.all.keys([<span class="string">'bar'</span>, <span class="string">'foo'</span>]);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span> &#125;).to.have.all.keys(&#123;<span class="string">'bar'</span>: <span class="number">6</span>, <span class="string">'foo'</span>, <span class="number">7</span>&#125;);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span>, <span class="attr">baz</span>: <span class="number">3</span> &#125;).to.contain.all.keys([<span class="string">'bar'</span>, <span class="string">'foo'</span>]);</div><div class="line">expect(&#123; <span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span>, <span class="attr">baz</span>: <span class="number">3</span> &#125;).to.contain.all.keys([&#123;<span class="string">'bar'</span>: <span class="number">6</span>&#125;&#125;]);</div></pre></td></tr></table></figure>
+<h3 id="should用法"><a href="#should用法" class="headerlink" title="should用法"></a>should用法</h3><p>同chai的差别详情<a href="http://chaijs.com/guide/styles/" target="_blank">参考</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">'chai'</span>);</div><div class="line">chai.should();</div><div class="line">    <span class="comment">//语法： 基本是 expect().to.xx 相当于 ().should.xx ****</span></div><div class="line">    foo.should.be.a(<span class="string">'string'</span>); <span class="comment">//expect(foo).to.be.a('string');</span></div><div class="line">    foo.should.equal(<span class="string">'bar'</span>); <span class="comment">//expect(foo).to.equal('bar');</span></div><div class="line">    <span class="comment">//省略用法，见expect</span></div></pre></td></tr></table></figure></p>
+<p>注意：should在IE9下有问题</p>
+<h3 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h3><p>assert为TDD用法，现在一般都是用基于BDD的测试，所以省略，详情请参考 <a href="" target="">Assert</a></p>
+<h2 id="chai-as-promise用法"><a href="#chai-as-promise用法" class="headerlink" title="chai as promise用法"></a>chai as promise用法</h2><ul>
+<li>将promise和chai结合起来，用于在某种异步的条件下形成的断言判断</li>
+<li>attention： Chai as Promised is only compatible with modern browsers (IE ≥9, Safari ≥6, no PhantomJS)</li>
+<li>具体用法：<a href="https://github.com/domenic/chai-as-promised/" target="_blank">参见</a></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">doSomethingAsync().then(</div><div class="line">    <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</div><div class="line">        result.should.equal(<span class="string">"foo"</span>);</div><div class="line">        done();</div><div class="line">    &#125;,</div><div class="line">    <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">       done(err);</div><div class="line">    &#125;</div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">//安装： npm install chai-as-promised</span></div><div class="line"><span class="comment">//引用chai as promise后可以写作 should.eventually.xxx</span></div><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">"chai"</span>);</div><div class="line"><span class="keyword">var</span> chaiAsPromised = <span class="built_in">require</span>(<span class="string">"chai-as-promised"</span>);</div><div class="line">chai.use(chaiAsPromised);</div><div class="line"><span class="keyword">var</span> should = chai.should();</div><div class="line"></div><div class="line"><span class="keyword">return</span> doSomethingAsync().should.eventually.equal(<span class="string">"foo"</span>);</div><div class="line"></div><div class="line"><span class="comment">//在ui测试中可以写作</span></div><div class="line"><span class="keyword">return</span> driver.getAttribute(input, <span class="string">'type'</span>).should.eventually.equal(fieldModel.type);</div><div class="line"></div><div class="line"><span class="keyword">return</span> promise.should.be.fulfilled;</div><div class="line"><span class="keyword">return</span> promise.should.eventually.deep.equal(<span class="string">"foo"</span>);</div><div class="line"><span class="keyword">return</span> promise.should.become(<span class="string">"foo"</span>); <span class="comment">// same as `.eventually.deep.equal`</span></div><div class="line"><span class="keyword">return</span> promise.should.be.rejected;</div><div class="line"><span class="keyword">return</span> promise.should.be.rejectedWith(<span class="built_in">Error</span>); <span class="comment">// other variants of Chai's `throw` assertion work too.</span></div><div class="line"></div><div class="line"><span class="comment">// 通过覆盖chaiAsPromised.transferPromiseness方法将assertion赋予then的链式调用功能</span></div><div class="line"><span class="comment">// 应用例子 wd.js中 chaiAsPromised.transferPromiseness = wd.transferPromiseness;</span></div><div class="line"></div><div class="line">chaiAsPromised.transferPromiseness = <span class="function"><span class="keyword">function</span> (<span class="params">assertion, promise</span>) </span>&#123;</div><div class="line">    assertion.then = promise.then.bind(promise); <span class="comment">// this is all you get by default</span></div><div class="line">    assertion.finally = promise.finally.bind(promise);</div><div class="line">    assertion.done = promise.done.bind(promise);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="sinon-chai用法"><a href="#sinon-chai用法" class="headerlink" title="sinon-chai用法"></a>sinon-chai用法</h2><ul>
+<li>sinon-chai 用于对<a href="http://sinonjs.org/" target="_blank">Sinon.JS</a>中的spy, stub, and mocking framework进行断言</li>
+<li>具体用法，<a href="http://chaijs.com/plugins/sinon-chai" target="_blank">参见</a></li>
+<li>API为：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Sinon.JS property/method</th>
+<th>Sinon–Chai assertion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>called</td>
+<td>spy.should.have.been.called</td>
+</tr>
+<tr>
+<td>callCount</td>
+<td>spy.should.have.callCount(n)</td>
+</tr>
+<tr>
+<td>calledOnce</td>
+<td>spy.should.have.been.calledOnce</td>
+</tr>
+<tr>
+<td>calledTwice</td>
+<td>spy.should.have.been.calledTwice</td>
+</tr>
+<tr>
+<td>calledThrice</td>
+<td>spy.should.have.been.calledThrice</td>
+</tr>
+<tr>
+<td>calledBefore</td>
+<td>spy1.should.have.been.calledBefore(spy2)</td>
+</tr>
+<tr>
+<td>calledAfter</td>
+<td>spy1.should.have.been.calledAfter(spy2)</td>
+</tr>
+<tr>
+<td>calledWithNew</td>
+<td>spy.should.have.been.calledWithNew</td>
+</tr>
+<tr>
+<td>alwaysCalledWithNew</td>
+<td>spy.should.always.have.been.calledWithNew</td>
+</tr>
+<tr>
+<td>calledOn</td>
+<td>spy.should.have.been.calledOn(context)</td>
+</tr>
+<tr>
+<td>alwaysCalledOn</td>
+<td>spy.should.always.have.been.calledOn(context)</td>
+</tr>
+<tr>
+<td>calledWith</td>
+<td>spy.should.have.been.calledWith(…args)</td>
+</tr>
+<tr>
+<td>alwaysCalledWith</td>
+<td>spy.should.always.have.been.calledWith(…args)</td>
+</tr>
+<tr>
+<td>calledWithExactly</td>
+<td>spy.should.have.been.calledWithExactly(…args)</td>
+</tr>
+<tr>
+<td>alwaysCalledWithExactly</td>
+<td>spy.should.always.have.been.calledWithExactly(…args)</td>
+</tr>
+<tr>
+<td>calledWithMatch</td>
+<td>spy.should.have.been.calledWithMatch(…args)</td>
+</tr>
+<tr>
+<td>alwaysCalledWithMatch</td>
+<td>spy.should.always.have.been.calledWithMatch(…args)</td>
+</tr>
+<tr>
+<td>returned</td>
+<td>spy.should.have.returned(returnVal)</td>
+</tr>
+<tr>
+<td>alwaysReturned</td>
+<td>spy.should.have.always.returned(returnVal)</td>
+</tr>
+<tr>
+<td>threw</td>
+<td>spy.should.have.thrown(errorObjOrErrorTypeStringOrNothing)</td>
+</tr>
+<tr>
+<td>alwaysThrew</td>
+<td>spy.should.have.always.thrown(errorObjOrErrorTypeStringOrNothing)</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//安装 npm install sinon-chai</span></div><div class="line"><span class="comment">//用法</span></div><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">"chai"</span>);</div><div class="line"><span class="keyword">var</span> sinonChai = <span class="built_in">require</span>(<span class="string">"sinon-chai"</span>);</div><div class="line">chai.should();</div><div class="line">chai.use(sinonChai);</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">name, cb</span>) </span>&#123;</div><div class="line">    cb(<span class="string">"hello "</span> + name);</div><div class="line">&#125;</div><div class="line">describe(<span class="string">"hello"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    it(<span class="string">"should call callback with correct greeting"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> cb = sinon.spy();</div><div class="line">        hello(<span class="string">"foo"</span>, cb);</div><div class="line">        cb.should.have.been.calledWith(<span class="string">"hello foo"</span>);</div><div class="line">        <span class="comment">//if expect expect(cb).to.have.been.calledWith("hello foo");</span></div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="chai和mocha结合的测试用例"><a href="#chai和mocha结合的测试用例" class="headerlink" title="chai和mocha结合的测试用例"></a>chai和mocha结合的测试用例</h3><ul>
+<li>browser端：<a href="http://chaijs.com/api/test/" target="_blank">点击</a></li>
+<li>node端:<ul>
+<li><a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/test/chai-should.js" target="_blank">chai-should.js</a></li>
+<li><a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/test/chai-expect.js" target="_blank">chai-expect.js</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-17T07:46:39.000Z" itemprop="dateUpdated">2017-04-17 15:46:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2015/11/11/613/" target="_blank" rel="external">https://mengbaby.github.io/2015/11/11/613/</a>
+    </div>
+    <footer>
+        <a href="https://mengbaby.github.io">
+            <img src="/img/avatar.jpeg" alt="Dr Meng">
+            Dr Meng
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai-as-promise/">chai as promise</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ui测试/">ui测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/单元测试/">单元测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/断言/">断言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/11/11/613/&title=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/11/11/613/&title=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/11/11/613/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/11/11/613/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/11/11/613/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2015/10/22/593/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Appium的源码编译安装</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2015/11/22/622/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">响应式设计的自动化测试</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'data4q-com';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Dr Meng &copy; 2017</span>
+        </p>
+        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17021258号</a></p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/11/11/613/&title=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/11/11/613/&title=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/11/11/613/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试基础-断言篇：chai和chai插件的用法》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/11/11/613/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/11/11/613/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxElEQVR42u3aQW6EMAwF0Ln/panUbUv4jpOUSi+rEQPoZWPF33w+8bq+V37l+rGSdy5buLi4be41XGPc3T1j+t2z43twcXHPc8eF5u7h8fXqPVGxw8XFfRk3Ob6MDy5J4cPFxf1f3GobkxxocHFx38zNm5NkM8n2tvdquLi4DW41MN3xe2O+i4uLW+RexdUfnOTF65d34uLiHuHmA9Q8Nk1ikU47hIuLe4bbGbXONT/VkwwuLu55bieMqI5dk4PRQ2HFxcU9zq0ea/Ki1mmHIhAuLu4GbrWNyUtbB/cQi+Di4m7g5geR/OOM6vVyf4aLi7uZW41Nq6UnCU8nh6+4uLibuXkZ6o9Y8s+/bjeAi4t7kDtX/6oHoM4bcHFxz3Crx5R8cDI3iH2g4+LiHuFWH1sbmCZN122+i4uLu42btzRzQ9O5ooaLi/sGbjWNXNvkFDaGi4t7kFuNNedi1mWDVVxc3M3cfkszF38k4WyrGcPFxW1z86KTb6BfyG7/xcXFPcjtD0qrH2NN3oOLi/sybvXElAxly/ErLi7uK7mdQKQaueLi4v4tt9qojDfT/7BjQSyCi4vb4K4NTPPClwesuLi4B7lfihqfZj0R/aAAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '点我点我点我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

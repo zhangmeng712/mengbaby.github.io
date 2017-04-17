@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>前端UI自动化测试 | 萌小主前端部落 | the more you know the more you know you don&#39;t know</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="appium,nodejs,自动化测试,前端,selenium,UI,wd.js,webdriver">
+    <meta name="description" content="测试手段UI测试目前主要有方式：  record-and-replay: 主要是指利用录制工具去记录用户的行为，并且把这种“行为“存储到脚本中，以便将来用于检测程序或应用是否能够产出预期的效果。常用的record-and-replay工具有：微软的RPF以及google早期出品的abite。 e2e测试(end-to-end testing)：这种测试方式不光可以测试UI层，还可以将整个系统的功能">
+<meta name="keywords" content="appium,nodejs,自动化测试,前端,selenium,UI,wd.js,webdriver">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端UI自动化测试">
+<meta property="og:url" content="https://mengbaby.github.io/2015/10/08/571/index.html">
+<meta property="og:site_name" content="萌小主前端部落">
+<meta property="og:description" content="测试手段UI测试目前主要有方式：  record-and-replay: 主要是指利用录制工具去记录用户的行为，并且把这种“行为“存储到脚本中，以便将来用于检测程序或应用是否能够产出预期的效果。常用的record-and-replay工具有：微软的RPF以及google早期出品的abite。 e2e测试(end-to-end testing)：这种测试方式不光可以测试UI层，还可以将整个系统的功能">
+<meta property="og:image" content="http://gtms01.alicdn.com/tps/i1/TB1EoZ_JpXXXXaSXVXXfGCCQVXX-512-362.jpg">
+<meta property="og:image" content="http://gtms01.alicdn.com/tps/i1/TB14RaGJFXXXXcVXpXXYZLw5FXX-556-445.jpeg">
+<meta property="og:image" content="http://gtms04.alicdn.com/tps/i4/TB1KqblJFXXXXcwXXXX2UFe5FXX-648-102.jpg">
+<meta property="og:image" content="http://gtms01.alicdn.com/tps/i1/TB16UnuJFXXXXXbXFXXMWa1RFXX-376-688.jpg">
+<meta property="og:image" content="http://gtms02.alicdn.com/tps/i2/TB1lbDlJFXXXXXBXVXXXiF3VFXX-1379-584.jpg">
+<meta property="og:updated_time" content="2017-04-17T07:13:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端UI自动化测试">
+<meta name="twitter:description" content="测试手段UI测试目前主要有方式：  record-and-replay: 主要是指利用录制工具去记录用户的行为，并且把这种“行为“存储到脚本中，以便将来用于检测程序或应用是否能够产出预期的效果。常用的record-and-replay工具有：微软的RPF以及google早期出品的abite。 e2e测试(end-to-end testing)：这种测试方式不光可以测试UI层，还可以将整个系统的功能">
+<meta name="twitter:image" content="http://gtms01.alicdn.com/tps/i1/TB1EoZ_JpXXXXaSXVXXfGCCQVXX-512-362.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="萌小主前端部落" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpeg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Dr Meng</h5>
+          <a href="mailto:zhangmeng712@gmail.com" title="zhangmeng712@gmail.com" class="mail">zhangmeng712@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhangmeng712"  >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端UI自动化测试</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端UI自动化测试</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2015-10-07T22:41:01.000Z" itemprop="datePublished" class="page-time">
+  2015-10-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试手段"><span class="post-toc-number">1.</span> <span class="post-toc-text">测试手段</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试内容"><span class="post-toc-number">2.</span> <span class="post-toc-text">测试内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试框架"><span class="post-toc-number">3.</span> <span class="post-toc-text">测试框架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#UI测试服务端的构建"><span class="post-toc-number">4.</span> <span class="post-toc-text">UI测试服务端的构建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Selenium-standalone"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Selenium-standalone</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Appium"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Appium</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#UI测试客户端框架"><span class="post-toc-number">5.</span> <span class="post-toc-text">UI测试客户端框架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简单用法"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">简单用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#chain和promise的写法"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">chain和promise的写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Asserter用法和自定义Asseter"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Asserter用法和自定义Asseter</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义操作方法"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">自定义操作方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入js代码"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">插入js代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结合mocha和chai"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">结合mocha和chai</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-f2e-testing-basic"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端UI自动化测试</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2015-10-08 06:41:01" datetime="2015-10-07T22:41:01.000Z"  itemprop="datePublished">2015-10-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="测试手段"><a href="#测试手段" class="headerlink" title="测试手段"></a>测试手段</h2><p>UI测试目前主要有方式：</p>
+<ul>
+<li>record-and-replay: 主要是指利用录制工具去记录用户的行为，并且把这种“行为“存储到脚本中，以便将来用于检测程序或应用是否能够产出预期的效果。常用的record-and-replay工具有：微软的RPF以及google早期出品的<a href="http://googletesting.blogspot.jp/2011/10/take-bite-out-of-bugs-and-redundant.html" target="_blank">abite</a>。</li>
+<li>e2e测试(end-to-end testing)：这种测试方式不光可以测试UI层，还可以将整个系统的功能进行测试。通常这种测试会使用第三方的测试工具作为测试doubles层以提升测试效率。</li>
+</ul>
+<h2 id="测试内容"><a href="#测试内容" class="headerlink" title="测试内容"></a>测试内容</h2><p>没人可以否认<strong>UI测试是耗时且昂贵的</strong>，所以在写测试的时候一定要慎重的选择使用UI测试的case，下图就是一种比较“聪明”的UI测试架构。我们可以将UI层进行拆分：<strong>视图层</strong>还有<strong>UI逻辑层</strong>。如果大家知道  MVX 这种架构，就会知道，UI逻辑层更像是 MVX 中的Controller层和Model层，视图层是比较难以测试和描述的，因此不建议将对视图层的内容作为UI测试的重点，当然我们也可以使用简单的spec来描述视图层的内容，或是对于视图的样式等使用 <strong><a href="http://galenframework.com/" target="_blank">galenframework</a></strong>类似的框架进行测试 (后面的<a href="http://dj1211.com/?p=622" target="_blank">blog</a>会专门介绍这个框架，它脱离了<a href="https://github.com/Huddle/PhantomCSS" target="_blank">phantomCss</a>的检测方式，使用特殊的spec方式来描述case，对于前端来说，非常值得学习)。</p>
+<p>因此我们更多的测试会围绕UI逻辑层进行。UI逻辑层主要的用途如下，因此我们的case就围绕着对这两部分功能的测试进行编写。</p>
+<ul>
+<li>用户和浏览器的交互(操作和更新html)</li>
+<li>监听html的事件并且将信息通过request传递给后台</li>
+</ul>
+<p><img src="http://gtms01.alicdn.com/tps/i1/TB1EoZ_JpXXXXaSXVXXfGCCQVXX-512-362.jpg" width="500px" height="340px"></p>
+<h2 id="测试框架"><a href="#测试框架" class="headerlink" title="测试框架"></a>测试框架</h2><p>UI测试框架主要由两部分构成：客户端的Test环境和测试服务，测试框架的基本原理很简单，本着经济有效的原则，设计了这款使用开源技术的UI测试框架，跨平台、支持多语言、且支持PC端和mobile端的测试方案，本人是前端，所以下例都是基于Nodejs/javascript书写。<br> <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://gtms01.alicdn.com/tps/i1/TB14RaGJFXXXXcVXpXXYZLw5FXX-556-445.jpeg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h2 id="UI测试服务端的构建"><a href="#UI测试服务端的构建" class="headerlink" title="UI测试服务端的构建"></a>UI测试服务端的构建</h2><p>   对于UI测试的服务端平台来说，非常欣赏<a href="https://www.browserstack.com/" target="_blank">BrowserStack</a>这个测试平台。实时的、Web-based、多语言，多浏览器、多机型支持，API和接口全面丰富的基于云端的测试平台，除了价格比较贵（$39/month），绝对是最完的测试利器。<br>   对于UI测试来说，浏览器宿主环境是非常重要的，而服务端的Hub架构就是通过代理服务器的方式帮你操纵各种类型的浏览器进行自动化测试。在此我们选择了selenium-standalone来实现pc端的server(内置Jetty服务器)；appium这个node服务器作为mobile端的server hub。</p>
+<h3 id="Selenium-standalone"><a href="#Selenium-standalone" class="headerlink" title="Selenium-standalone"></a>Selenium-standalone</h3><p>   <a href="https://www.npmjs.com/package/selenium-standalone" target="_blank" rel="external">selenium-standalone</a>支持node安装方式,通过下列脚本可以安装执行，同时可以配置对应的hub信息。</p>
+<ul>
+<li>npm install selenium-standalone@latest -g</li>
+<li>selenium-standalone start – -role node -hub <a href="http://localhost:4444/grid/register" target="_blank" rel="external">http://localhost:4444/grid/register</a> -port 5556</li>
+</ul>
+<ul>
+<li>selenium默认支持的浏览器为Firefox和phantom，如果要使用它操纵其他的浏览器参考如下方式安装对应驱动：</li>
+<li>chrome:selenium-standalone install –drivers.chrome.version=2.15 –drivers.chrome.baseURL=<a href="http://chromedriver.storage.googleapis.com" target="_blank" rel="external">http://chromedriver.storage.googleapis.com</a></li>
+<li>safari：下载，并在safari中安装<a href="http://selenium-release.storage.googleapis.com/index.html" target="_blank">SafariDriver.safariextz</a>插件</li>
+<li>ie：selenium-standalone install –drivers.chrome.version=2.15 –drivers.chrome.baseURL=<a href="http://chromedriver.storage.googleapis.com" target="_blank" rel="external">http://chromedriver.storage.googleapis.com</a></li>
+</ul>
+<h3 id="Appium"><a href="#Appium" class="headerlink" title="Appium"></a>Appium</h3><p>####简介<br>mobile端的开发越来越火热，为了保证开发质量，也有很多针对移动端的测试工具应运而生。<a href="http://appium.io" target="_blank">Appium</a>就是其中很活跃的开源框架。本质上它包括两部分内容：</p>
+<ul>
+<li>基于express的server用于发送/接收client端的协议命令</li>
+<li>作为bootstrap客户端用于将命令传递给对应的UIAutomator/UIAutomation/Google’s Instrumentation</li>
+</ul>
+<p>Appium最大的特色就是<strong>支持ios/android/firefoxos多种平台的测试，native、h5、hybrid都支持，以及所有支持jsonWireProtocal协议的脚本语言：python，java，nodejs ruby都可以用来书写用例</strong>。</p>
+<p>####安装</p>
+<p>因为Appium的社区发展的很快，建议使用源码编译使用，而不是使用AppiumGUI(它本身是由第三方社区维护，并不属于appium的核心产品 所以很多bug更新的并不及时，例如测试h5页面的时候页面会出现)，此外还可以根据自己的要求修改源码和调试，下面就简要介绍一下源码安装的方法, 安装详细方法 请见 <a href="https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md" target="_blank">Running Appium from Source</a>：</p>
+<ul>
+<li>配置IOS环境<ul>
+<li>xcode安装好</li>
+</ul>
+</li>
+<li>配置Andorid环境<ul>
+<li>java jdk 配置好并设置好JAVA_HOME</li>
+<li>android sdk安装并配置好ANDROID_HOME</li>
+<li>建议在真机下进行测试（模拟器启动速度慢），参见<a href="https://nishantverma.gitbooks.io/appium-for-android/content/executing_test_on_real_devices/index.html" target="_blank">executing_test_on_real_devices</a></li>
+</ul>
+</li>
+<li>运行下方代码</li>
+<li>以IOS为例：编译安装并启动的结果如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/appium/appium.git</div><div class="line">   cd appium</div><div class="line">   ./reset.sh --verbose #感谢g*f*w 安装过程痛苦而漫长，使用--verbose显示日志吧，至少知道在哪里卡住</div><div class="line">   sudo ./bin/authorize-ios.js # for ios only modify /etc/authorization</div><div class="line">   node .</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://gtms04.alicdn.com/tps/i4/TB1KqblJFXXXXcwXXXX2UFe5FXX-648-102.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>如果需要详细的server启动配置，请参考<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md" target="_blank">Appium server arguments</a>，例如 只想实现针对safari进行h5页面的自动化测试，配置参数为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node . --safari</div></pre></td></tr></table></figure>
+<h2 id="UI测试客户端框架"><a href="#UI测试客户端框架" class="headerlink" title="UI测试客户端框架"></a>UI测试客户端框架</h2><p>前面提到了<a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol" target="_blank">jsonWireProtcal</a>协议，主要用于客户端的Testcase中定义对浏览器的操作，实现了这个协议的框架和语言有很多，这个大家自行选择。协议形如</p>
+<p>GET /session/:sessionId/screenshot<br>Take a screenshot of the current page.</p>
+<p>个人比较欣赏<a href="https://www.npmjs.com/package/wd" target="_blank">wd.js</a>这个框架，它是一个webdriver/selenium 2的node端实现，各种异步promise支持，自定义方法非常方便，同时支持mocha和chai的无缝嵌入。</p>
+<h3 id="简单用法"><a href="#简单用法" class="headerlink" title="简单用法"></a>简单用法</h3><ul>
+<li>安装依赖</li>
+<li>配置desirecapabilities,<a href="https://code.google.com/p/selenium/wiki/DesiredCapabilities" target="_blank">详细参数</a></li>
+<li>操纵浏览器，API参加 <a href="https://github.com/admc/wd/blob/master/doc/api.md" target="_blank" rel="external">API列表</a></li>
+<li>详细代码参见<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/wd-helloword.js" target="_blank">github</a></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> wd = <span class="built_in">require</span>(<span class="string">"wd"</span>);</div><div class="line"><span class="keyword">var</span> driver = wd.promiseChainRemote(&#123;</div><div class="line">    <span class="attr">protocol</span>: <span class="string">'http:'</span>,</div><div class="line">    <span class="attr">hostname</span>: <span class="string">'127.0.0.1'</span>,</div><div class="line">    <span class="attr">port</span>: <span class="string">'4444'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/wd/hub'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">driver</div><div class="line">    .init(&#123;<span class="attr">browserName</span>: <span class="string">'safari'</span>&#125;)</div><div class="line">    .get(<span class="string">'http://www.baidu.com'</span>)</div><div class="line">    .sleep(<span class="number">5000</span>)</div><div class="line">    .title().then(<span class="function"><span class="keyword">function</span> (<span class="params">title</span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'this is the website title'</span>, title)</div><div class="line">    &#125;)</div><div class="line">    .quit();</div></pre></td></tr></table></figure>
+<h3 id="chain和promise的写法"><a href="#chain和promise的写法" class="headerlink" title="chain和promise的写法"></a>chain和promise的写法</h3><p>将异步转化为Q chain的链式调用方式，内置<a href="http://documentup.com/kriskowal/q/" target="_blank">Q</a><br>支持自定义的promise,代码如下所示，详细代码见<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/wd-promise.js" target="_blank">github</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @fileOverView wd-promise wd 链式调用实例</div><div class="line"> * @author zhangmeng on 15/10/4</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">var</span> wd = <span class="built_in">require</span>(<span class="string">"wd"</span>);</div><div class="line"><span class="comment">//内置Q chain</span></div><div class="line"><span class="keyword">var</span> Q = wd.Q;</div><div class="line"><span class="keyword">var</span> browser = wd.promiseChainRemote(&#123;</div><div class="line">    <span class="attr">protocol</span>: <span class="string">'http:'</span>,</div><div class="line">    <span class="attr">hostname</span>: <span class="string">'127.0.0.1'</span>,</div><div class="line">    <span class="attr">port</span>: <span class="string">'4444'</span>,</div><div class="line">    <span class="attr">path</span>: <span class="string">'/wd/hub'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 自定义链式调用用于实现drag 和 drop的操作</div><div class="line"> * @param fromElm cssSelector</div><div class="line"> * @param toElm cssSelector</div><div class="line"> * @returns &#123;Function&#125; browser</div><div class="line"> */</div><div class="line"><span class="keyword">var</span> dragNdrop = <span class="function"><span class="keyword">function</span> (<span class="params">fromElm, toElm</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> Q.all([</div><div class="line">            browser.elementByCssSelector(fromElm),</div><div class="line">            browser.elementByCssSelector(toElm)</div><div class="line">        ]).then(<span class="function"><span class="keyword">function</span> (<span class="params">els</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(els);</div><div class="line">            <span class="keyword">return</span> browser</div><div class="line">                    .moveTo(els[<span class="number">0</span>])</div><div class="line">                    .buttonDown()</div><div class="line">                    .moveTo(els[<span class="number">1</span>])</div><div class="line">                    .buttonUp();</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">browser</div><div class="line">    .init(&#123;<span class="attr">browserName</span>:<span class="string">'chrome'</span>&#125;)</div><div class="line">    .get(<span class="string">'http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test-html/test-dragNdrop.html'</span>)</div><div class="line">    <span class="comment">//chain link</span></div><div class="line">    .then(dragNdrop(<span class="string">'.dragable'</span>,<span class="string">'.dropable'</span>))</div><div class="line">    .sleep(<span class="number">1000</span>)</div><div class="line">    .fin(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> browser.quit(); &#125;)</div><div class="line">    .done();</div></pre></td></tr></table></figure>
+<h3 id="Asserter用法和自定义Asseter"><a href="#Asserter用法和自定义Asseter" class="headerlink" title="Asserter用法和自定义Asseter"></a>Asserter用法和自定义Asseter</h3><p>wd.js内置了基本的Asserter，同时支持自定义的断言。多数结合waitfor“句式“使用。这个在实际中经常应用，例如当页面中某个元素出现特定状态的时候去做某事，或者是判断某异步的加载完成的时候执行某操作等。</p>
+<p>内置的判断包括</p>
+<ul>
+<li>nonEmptyText</li>
+<li>isDisplayed</li>
+<li>isNotDisplayed</li>
+<li>textInclude</li>
+<li>jsCondition</li>
+<li>isVisible</li>
+<li>isHidden</li>
+<li>jsCondition(常用)</li>
+</ul>
+<p>waitfor包括：</p>
+<ul>
+<li>waitFor</li>
+<li>waitForElementByCss(elem, asserter, timeout, pollFreq, callback)（常用,判定当某元素存在，且满足某asserter的时候调用回调）</li>
+<li>waitForConditionInBrowser(jsExpression) 需要设置异步超时时间，setAsyncScriptTimeout</li>
+</ul>
+<p>如果上述都不满足还可以自定义Asserter，下面是对应的例子，使用多种方法判断ajax加载完成后进行测试内容，详情见<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/wd-assert.js" target="_blank">wd-asserter.js</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//自定义方法</span></div><div class="line"><span class="keyword">var</span> tableHasBeenLoaded = <span class="keyword">new</span> Asserter(</div><div class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">browser, cb</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> jsConditionExpr = <span class="string">'($("#tbody tr").length &gt; 0) ? true: false'</span>;</div><div class="line">        <span class="keyword">var</span> _eval = browser.eval;</div><div class="line">        _eval.apply( browser , [jsConditionExpr, <span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span>(err) &#123;<span class="keyword">return</span> cb(err);&#125;</div><div class="line">            cb(<span class="literal">null</span>, res, res);</div><div class="line">        &#125;]);</div><div class="line">    &#125;</div><div class="line">);</div><div class="line">browser</div><div class="line">    .init(&#123;<span class="attr">browserName</span>: <span class="string">'chrome'</span>&#125;)</div><div class="line">    .setAsyncScriptTimeout(<span class="number">30000</span>)</div><div class="line">    .get(<span class="string">'http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test-html/test-assert.html'</span>)</div><div class="line">    <span class="comment">//------------- case2 jsCondition  waitForConditionInBrowser new Asserter waitForAjaxLoaded -----</span></div><div class="line">    .elementByCss(<span class="string">'#getBtn'</span>)</div><div class="line">    .click() <span class="comment">//click to trigger ajaxloading</span></div><div class="line">    <span class="comment">//.waitFor(tableHasBeenLoaded, 4000)</span></div><div class="line">    .execute(<span class="string">'alert("ajax finished")'</span>)</div><div class="line">    .sleep(<span class="number">2000</span>)</div><div class="line">    .fin(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> browser.quit();</div><div class="line">    &#125;)</div><div class="line">    .done();</div></pre></td></tr></table></figure>
+<h3 id="自定义操作方法"><a href="#自定义操作方法" class="headerlink" title="自定义操作方法"></a>自定义操作方法</h3><p>使用wd.PromiseChainWebdriver.prototype可以将自定义的方法chain到链式调用中去，同时还可以使用promise来实现，例如上面dragNdrop的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//method1 of self-defined method</span></div><div class="line">wd.PromiseChainWebdriver.prototype.waitForAjaxLoaded = <span class="function"><span class="keyword">function</span> (<span class="params">timeout</span>) </span>&#123;</div><div class="line">	<span class="comment">//this为browser内容</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.waitFor(tableHasBeenLoaded, timeout)</div><div class="line">&#125;</div><div class="line"><span class="comment">//method2</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">selfDefinedFunction</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> browser.xxxxx</div><div class="line">&#125;</div><div class="line"></div><div class="line">browser.init().get().selfDefinedFunction().xx</div></pre></td></tr></table></figure>
+<h3 id="插入js代码"><a href="#插入js代码" class="headerlink" title="插入js代码"></a>插入js代码</h3><p>在测试的实际应用中，经常需要引入需要的类库或者辅助代码来实现测试的目的，那么应该怎么操作呢，wd.js按照jsonWireProtocal是支持执行js代码的，一般通过下面两个方法。最常见的是要测的代码中是没有对应的类库的 如果要使用，例如jquery kissy，那么需要预先inject对应的代码，类似js bookmark书签，或者chrome的插件中的content_script代码。具体代码参见<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/wd-jsInject.js" target="_blank">wd-jsinject.js</a></p>
+<ul>
+<li>execute()：执行同步代码</li>
+<li>executeAsync()：执行的内容中含有异步的内容</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//load.js 用于load javascript类库</span></div><div class="line"><span class="keyword">var</span> loadScript = <span class="function"><span class="keyword">function</span> (<span class="params">scriptUrl, callback</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    <span class="keyword">var</span> head = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>];</div><div class="line">    <span class="keyword">var</span> done = <span class="literal">false</span>;</div><div class="line">    script.onload = script.onreadystatechange = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!done &amp;&amp; (!<span class="keyword">this</span>.readyState || <span class="keyword">this</span>.readyState == <span class="string">'loaded'</span></div><div class="line">            || <span class="keyword">this</span>.readyState == <span class="string">'complete'</span>)) &#123;</div><div class="line">            done = <span class="literal">true</span>;</div><div class="line">            script.onload = script.onreadystatechange = <span class="literal">null</span>;</div><div class="line">            head.removeChild(script);</div><div class="line">            callback();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    script.src = scriptUrl;</div><div class="line">    head.appendChild(script);</div><div class="line">&#125;;</div><div class="line">loadScript = loadScript(<span class="built_in">arguments</span>[<span class="number">0</span>], <span class="built_in">arguments</span>[<span class="built_in">arguments</span>.length - <span class="number">1</span>]);</div><div class="line"><span class="comment">//loadScript('//cdn.bootcss.com/jquery/2.1.4/jquery.js');</span></div><div class="line"></div><div class="line"><span class="comment">//dom.js 判断类库是否正确引入，设置</span></div><div class="line">Fn = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> appendChild = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">"#i_am_an_id"</span>).append(<span class="string">'&lt;div class="child"&gt;I am the child&lt;/div&gt;'</span>)</div><div class="line">&#125;, <span class="built_in">arguments</span>[<span class="number">0</span>]);</div><div class="line"></div><div class="line"><span class="keyword">var</span> removeChildren = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">"#i_am_an_id"</span>).empty();</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Fn = &#123;</div><div class="line">    <span class="attr">appendChild</span>: appendChild,</div><div class="line">    <span class="attr">removeChildren</span>: removeChildren</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//定义object方便链式操作中调用</span></div><div class="line"><span class="built_in">window</span>.Fn = Fn;</div><div class="line"></div><div class="line"><span class="comment">//wd-jsInject.js</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> jsFileToString = <span class="function"><span class="keyword">function</span> (<span class="params">filePath</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> file = fs.readFileSync(filePath, <span class="string">"utf8"</span>);</div><div class="line">    <span class="keyword">return</span> file;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//读取本地的代码</span></div><div class="line"><span class="keyword">var</span> codeUrl = <span class="string">'/opt/local/share/nginx/html/my-git/f2e-testing/ui-wd-tests/scripts/dom.js'</span>;</div><div class="line"><span class="comment">//加载jquery等类库</span></div><div class="line"><span class="keyword">var</span> loadUrl = <span class="string">'/opt/local/share/nginx/html/my-git/f2e-testing/ui-wd-tests/scripts/load.js'</span>;</div><div class="line"></div><div class="line"><span class="comment">//读取js代码（自动转化为jsExpression）</span></div><div class="line"><span class="keyword">var</span> executeStr = jsFileToString(codeUrl);</div><div class="line"><span class="keyword">var</span> loadScriptStr = jsFileToString(loadUrl);</div><div class="line"></div><div class="line">browser</div><div class="line">      .init(&#123;<span class="attr">browserName</span>:<span class="string">'chrome'</span>&#125;)</div><div class="line">      .get(<span class="string">'http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test-html/test-injectjs.html'</span>)</div><div class="line">      <span class="comment">//inject jquery</span></div><div class="line">      .setAsyncScriptTimeout(<span class="number">30000</span>)</div><div class="line">      .executeAsync(loadScriptStr, [<span class="string">"//cdn.bootcss.com/jquery/2.1.4/jquery.js"</span>])</div><div class="line">      .execute(executeStr)</div><div class="line">      <span class="comment">//测试jquery是否正常引入</span></div><div class="line">      .execute(<span class="string">'Fn.appendChild'</span>, [<span class="number">1000</span>])</div><div class="line">      .execute(<span class="string">'Fn.removeChildren()'</span>)</div><div class="line">      .sleep(<span class="number">2000</span>)</div><div class="line">      .fin(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> browser.quit(); &#125;)</div><div class="line">      .done();</div></pre></td></tr></table></figure>
+<h3 id="结合mocha和chai"><a href="#结合mocha和chai" class="headerlink" title="结合mocha和chai"></a>结合mocha和chai</h3><p><a href="https://mochajs.org/" target="_blank">mocha</a>是用于测试的框架，chai用于辅助断言，wd.js支持两者的无缝接入，可以使ui测试变得像单元测试一样简单。参考下面的demo，就是把三者结合在一起，通过wd对appium访问ios虚拟机，对手机淘宝搜索结果页进行UI测试的例子，代码详见<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/mobile/safari-wd-search-test.js" target="_blank">Github F2E-testing UI test</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'../helpers/setup'</span>);</div><div class="line"><span class="keyword">var</span> wd = <span class="built_in">require</span>(<span class="string">"wd"</span>);</div><div class="line"><span class="keyword">var</span> serverConfig = <span class="built_in">require</span>(<span class="string">'../helpers/server'</span>).appium;</div><div class="line"><span class="keyword">var</span> desired = <span class="built_in">require</span>(<span class="string">'../helpers/caps'</span>).ios90s;</div><div class="line"><span class="keyword">var</span> begin_page_url = <span class="string">'http://s.m.taobao.com/h5?search-btn=&amp;event_submit_do_new_search_auction=1&amp;_input_charset=utf-8&amp;topSearch=1&amp;atype=b&amp;searchfrom=1&amp;action=home%3Aredirect_app_action&amp;from=1'</span>;</div><div class="line"></div><div class="line">describe(<span class="string">'test page of taobao search'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.timeout(<span class="number">300000</span>);</div><div class="line">    <span class="keyword">var</span> driver;</div><div class="line">    before(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        driver = wd.promiseChainRemote(serverConfig);</div><div class="line">        <span class="built_in">require</span>(<span class="string">"../helpers/logger"</span>).configure(driver);<span class="comment">//显示日志</span></div><div class="line">        <span class="keyword">return</span> driver.init(desired);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    after(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> driver.quit();</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="comment">//1打开淘宝搜索页面</span></div><div class="line">    <span class="comment">//2点击搜索框</span></div><div class="line">    <span class="comment">//3进入到搜索结果页面</span></div><div class="line">    it(<span class="string">"should open iphone+6s search page"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> inputValue = <span class="string">'iphone 6s'</span>;</div><div class="line">        <span class="keyword">return</span> driver</div><div class="line">              .get(begin_page_url)</div><div class="line">              .sleep(<span class="number">1000</span>)</div><div class="line">              .waitForElementByName(<span class="string">'q'</span>, <span class="number">2000</span>)</div><div class="line">              .sendKeys(inputValue)</div><div class="line">              .waitForElementByName(<span class="string">'search'</span>)</div><div class="line">              .tap()</div><div class="line">              .sleep(<span class="number">5000</span>)</div><div class="line">              .eval(<span class="string">'window.location.href'</span>)</div><div class="line">              .should.eventually.include(<span class="string">'q=iphone+6s'</span>)</div><div class="line">    &#125;);</div><div class="line"></div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://gtms01.alicdn.com/tps/i1/TB16UnuJFXXXXXbXFXXMWa1RFXX-376-688.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://gtms02.alicdn.com/tps/i2/TB1lbDlJFXXXXXBXVXXXiF3VFXX-1379-584.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-17T07:13:37.000Z" itemprop="dateUpdated">2017-04-17 15:13:37</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2015/10/08/571/" target="_blank" rel="external">https://mengbaby.github.io/2015/10/08/571/</a>
+    </div>
+    <footer>
+        <a href="https://mengbaby.github.io">
+            <img src="/img/avatar.jpeg" alt="Dr Meng">
+            Dr Meng
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/selenium/">selenium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/wd-js/">wd.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webdriver/">webdriver</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/10/08/571/&title=《前端UI自动化测试》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/10/08/571/&title=《前端UI自动化测试》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/10/08/571/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端UI自动化测试》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/10/08/571/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/10/08/571/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2015/09/21/556/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">browserify和webpack快速配置入门教程</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2015/10/13/581/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端自动化测试基础-mocha篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'data4q-com';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Dr Meng &copy; 2017</span>
+        </p>
+        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17021258号</a></p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/10/08/571/&title=《前端UI自动化测试》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/10/08/571/&title=《前端UI自动化测试》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/10/08/571/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端UI自动化测试》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/10/08/571/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/10/08/571/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aQYrDMAwF0N7/0h2Y1UCp+d9K3A48r0KT1M9ZCEvW4xGP5+9YX78+/3es//PigYuLO+Y+l+PdX69/ecYjN+Di4p7nJsFr78l37+YBERcX95u56/1GsnHZ2yrh4uJ+MzfaggQpUL5IXFzcz3Lb5KQFJeHv4lwNFxd3wL2qYDq5/kB9FxcXd+tUIj8OaZ/cnB0XF/cINz8mSXBn0iFcXNy7ue+gyfFqfsg676/AxcU9yW2bpdZpTBvmJq0euLi493GTQDNvm5inQ9G3xMXFvZTbNk/sxcga9/oWLi7uEe5V09z3ZJ324OLijrnrwNEWNPeKp8XhKy4u7hFui56UVuftX7i4uGe4RbIRF1XboFYUVnBxcY9zk5g3OUaddIjg4uKe5NaJRwlqmzaij4KLi3szt01CkonzDVBdWsXFxT3ITaJdEp72kpxiYbi4uAe5k7Lmeql75dHIjouLexu3DSgtN0972ru4uLh3c/Og0042CWRv7+Li4h7k5sGrLYlODmiL27i4uB/iTjYxk4ILLi7uf+FOiix7aRUuLu55blskzRe8V4+5oCyCi4s74LYvt00YbTPHZJG4uLhj7g8zNL5V4ucPbwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '点我点我点我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

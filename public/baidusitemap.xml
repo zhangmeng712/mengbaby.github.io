@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/09/06/450/</loc>
+    <lastmod>2017-04-17T07:55:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>React生命周期、API和深入用法</title>
+        <pubTime>2015-09-06T03:04:22.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="https://mengbaby.github.io/categories/javascript/"/>
+          
+             
+              <breadCrumb title="react" url="https://mengbaby.github.io/categories/javascript/react/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/11/11/613/</loc>
+    <lastmod>2017-04-17T07:46:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试基础-断言篇：chai和chai插件的用法</title>
+        <pubTime>2015-11-11T06:32:50.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>自动化测试</tag>
+         
+        <tag>chai</tag>
+         
+        <tag>chai as promise</tag>
+         
+        <tag>mocha</tag>
+         
+        <tag>ui测试</tag>
+         
+        <tag>单元测试</tag>
+         
+        <tag>断言</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="https://mengbaby.github.io/categories/javascript/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/javascript/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2016/01/24/667/</loc>
+    <lastmod>2017-04-17T07:22:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>ES6的核心语法与应用</title>
+        <pubTime>2016-01-24T06:28:03.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>React</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="https://mengbaby.github.io/categories/javascript/"/>
+          
+             
+              <breadCrumb title="es6" url="https://mengbaby.github.io/categories/javascript/es6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/03/15/369/</loc>
+    <lastmod>2017-04-17T07:21:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>mobile H5布局大全-rem flexbox详解</title>
+        <pubTime>2015-03-15T01:29:14.000Z</pubTime>
+        
+        <tag>css3</tag>
+         
+        <tag>flexbox</tag>
+         
+        <tag>mobile</tag>
+         
+        <tag>mobile-layout</tag>
+         
+        <tag>rem</tag>
+         
+        <tag>viewport</tag>
+         
+         
+           
+             
+              <breadCrumb title="css3" url="https://mengbaby.github.io/categories/css3/"/>
+          
+             
+              <breadCrumb title="h5" url="https://mengbaby.github.io/categories/css3/h5/"/>
+          
+             
+              <breadCrumb title="mobile" url="https://mengbaby.github.io/categories/css3/h5/mobile/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/12/26/640/</loc>
+    <lastmod>2017-04-17T07:20:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试基础-sinon篇章</title>
+        <pubTime>2015-12-26T05:10:16.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>自动化测试</tag>
+         
+        <tag>sinon</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://mengbaby.github.io/categories/nodejs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodejs/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/11/22/622/</loc>
+    <lastmod>2017-04-17T07:19:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>响应式设计的自动化测试</title>
+        <pubTime>2015-11-21T23:26:47.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>javascript</tag>
+         
+        <tag>css3</tag>
+         
+        <tag>galenframework</tag>
+         
+        <tag>responsive design</tag>
+         
+        <tag>UI自动化测试</tag>
+         
+        <tag>响应式设计</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://mengbaby.github.io/categories/nodejs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodejs/testing/"/>
+          
+             
+              <breadCrumb title="responsive design" url="https://mengbaby.github.io/categories/nodejs/testing/responsive-design/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/10/13/581/</loc>
+    <lastmod>2017-04-17T07:16:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试基础-mocha篇</title>
+        <pubTime>2015-10-13T00:05:22.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>自动化测试</tag>
+         
+        <tag>chai</tag>
+         
+        <tag>mocha</tag>
+         
+        <tag>bdd</tag>
+         
+        <tag>前端</tag>
+         
+        <tag>异步</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodjs" url="https://mengbaby.github.io/categories/nodjs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodjs/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2016/02/10/673/</loc>
+    <lastmod>2017-04-17T07:15:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试之单元测试（二）—— react组件的测试工具jest</title>
+        <pubTime>2016-02-09T22:47:02.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>nodejs</tag>
+         
+        <tag>React</tag>
+         
+        <tag>jest</tag>
+         
+        <tag>前端单元测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="Uncategorized" url="https://mengbaby.github.io/categories/Uncategorized/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/10/08/571/</loc>
+    <lastmod>2017-04-17T07:13:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端UI自动化测试</title>
+        <pubTime>2015-10-07T22:41:01.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>nodejs</tag>
+         
+        <tag>自动化测试</tag>
+         
+        <tag>前端</tag>
+         
+        <tag>selenium</tag>
+         
+        <tag>UI</tag>
+         
+        <tag>wd.js</tag>
+         
+        <tag>webdriver</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://mengbaby.github.io/categories/nodejs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodejs/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2016/03/10/678/</loc>
+    <lastmod>2017-04-17T07:02:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试（三）- angular和protracor</title>
+        <pubTime>2016-03-09T20:53:58.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>angular</tag>
+         
+        <tag>e2e</tag>
+         
+        <tag>protractor</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://mengbaby.github.io/categories/nodejs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodejs/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/02/03/332/</loc>
+    <lastmod>2017-04-17T06:26:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>css3和动画-part1-变换</title>
+        <pubTime>2015-02-03T03:15:22.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>css3</tag>
+         
+        <tag>html5</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="https://mengbaby.github.io/categories/javascript/"/>
+          
+             
+              <breadCrumb title="css3" url="https://mengbaby.github.io/categories/javascript/css3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/09/21/556/</loc>
+    <lastmod>2017-04-17T06:05:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>browserify和webpack快速配置入门教程</title>
+        <pubTime>2015-09-21T01:04:12.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>nodejs</tag>
+         
+        <tag>browserify</tag>
+         
+        <tag>webpack</tag>
+         
+        <tag>前端自动化部署</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>敏捷开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="https://mengbaby.github.io/categories/javascript/"/>
+          
+             
+              <breadCrumb title="workflow" url="https://mengbaby.github.io/categories/javascript/workflow/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/10/22/593/</loc>
+    <lastmod>2017-04-17T05:59:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium的源码编译安装</title>
+        <pubTime>2015-10-22T01:08:14.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>ios</tag>
+         
+        <tag>javascript</tag>
+         
+        <tag>nodejs</tag>
+         
+        <tag>自动化测试</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://mengbaby.github.io/categories/nodejs/"/>
+          
+             
+              <breadCrumb title="testing" url="https://mengbaby.github.io/categories/nodejs/testing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mengbaby.github.io/2015/12/31/650/</loc>
+    <lastmod>2017-04-17T05:55:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化测试之单元测试（一）—— polymer组件的测试工具</title>
+        <pubTime>2015-12-30T20:04:54.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>前端单元测试</tag>
+         
+        <tag>polymer</tag>
+         
+        <tag>unit test</tag>
+         
+        <tag>web components</tag>
+         
+        <tag>web-components-tester</tag>
+         
+         
+           
+             
+              <breadCrumb title="Uncategorized" url="https://mengbaby.github.io/categories/Uncategorized/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
