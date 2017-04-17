@@ -810,9 +810,9 @@ suite('markers default', function () {
       <category term="responsive design" scheme="https://mengbaby.github.io/categories/nodejs/testing/responsive-design/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
-    
       <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
+    
+      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
     
       <category term="css3" scheme="https://mengbaby.github.io/Mtags/css3/"/>
     
@@ -1092,15 +1092,15 @@ suite('markers default', function () {
       <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
-    
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
-    
       <category term="android" scheme="https://mengbaby.github.io/Mtags/android/"/>
     
       <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
     
       <category term="ios" scheme="https://mengbaby.github.io/Mtags/ios/"/>
+    
+      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+    
+      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
     
       <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
@@ -1322,9 +1322,9 @@ suite('markers default', function () {
       <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
-    
       <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
+    
+      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
     
       <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
@@ -1414,11 +1414,11 @@ suite('markers default', function () {
       <category term="workflow" scheme="https://mengbaby.github.io/categories/javascript/workflow/"/>
     
     
-      <category term="browserify" scheme="https://mengbaby.github.io/Mtags/browserify/"/>
-    
       <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
     
       <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+    
+      <category term="browserify" scheme="https://mengbaby.github.io/Mtags/browserify/"/>
     
       <category term="webpack" scheme="https://mengbaby.github.io/Mtags/webpack/"/>
     
