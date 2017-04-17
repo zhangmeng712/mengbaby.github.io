@@ -1174,9 +1174,9 @@ suite('markers default', function () {
     
       <category term="mocha" scheme="https://mengbaby.github.io/Mtags/mocha/"/>
     
-      <category term="bdd" scheme="https://mengbaby.github.io/Mtags/bdd/"/>
-    
       <category term="前端" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="bdd" scheme="https://mengbaby.github.io/Mtags/bdd/"/>
     
       <category term="异步" scheme="https://mengbaby.github.io/Mtags/%E5%BC%82%E6%AD%A5/"/>
     
@@ -1328,8 +1328,6 @@ suite('markers default', function () {
     
       <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="前端" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="selenium" scheme="https://mengbaby.github.io/Mtags/selenium/"/>
     
       <category term="UI" scheme="https://mengbaby.github.io/Mtags/UI/"/>
@@ -1337,6 +1335,8 @@ suite('markers default', function () {
       <category term="wd.js" scheme="https://mengbaby.github.io/Mtags/wd-js/"/>
     
       <category term="webdriver" scheme="https://mengbaby.github.io/Mtags/webdriver/"/>
+    
+      <category term="前端" scheme="https://mengbaby.github.io/Mtags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
