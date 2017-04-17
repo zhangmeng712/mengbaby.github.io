@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>萌小主前端部落 | the more you know the more you know you don&#39;t know</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta name="description" content="the more you know the more you know you don&apos;t know">
+<meta property="og:type" content="website">
+<meta property="og:title" content="萌小主前端部落">
+<meta property="og:url" content="https://mengbaby.github.io/index.html">
+<meta property="og:site_name" content="萌小主前端部落">
+<meta property="og:description" content="the more you know the more you know you don&apos;t know">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="萌小主前端部落">
+<meta name="twitter:description" content="the more you know the more you know you don&apos;t know">
+    
+        <link rel="alternate" type="application/atom+xml" title="萌小主前端部落" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpeg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Dr Meng</h5>
+          <a href="mailto:zhangmeng712@gmail.com" title="zhangmeng712@gmail.com" class="mail">zhangmeng712@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhangmeng712"  >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">萌小主前端部落</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">萌小主前端部落</h1>
+        <h5 class="subtitle">
+            
+                the more you know the more you know you don't know
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-angular"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/03/10/678/">前端自动化测试（三）- angular和protracor</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        protractor用于前端UI自动化测试,特别为angular程序定制
+特点
+端对端(e2e)测试
+采用jasmine作为测试框架
+基于WebDriverJS,(selenium-webdriver)
+针对angular应用增加定位器,更加方便实用
+实现自动等待,告别sleep wait,变异步为同步
+支持测试代码的调试
+支持多浏览器的并行UI测试
+
+使用方法准备工作
+1 安装protra...
+    
+
+        <a href="/2016/03/10/678/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-jest"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-02-10 06:47:02" datetime="2016-02-09T22:47:02.000Z"  itemprop="datePublished">2016-02-10</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/02/10/673/">前端自动化测试之单元测试（二）—— react组件的测试工具jest</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        前面介绍了Polymer的测试框架web-components-tester, 今天来看看React团队出品的Jest.在此,特别感谢婆婆帮忙带宝宝才让我有时间继续书写文章.
+前面介绍了Polymer的测试框架web-components-tester, 今天来看看React团队出品的Jest.在此,特别感谢婆婆帮忙带宝宝才让我有时间继续书写文章.
+Jest的功能
+内置jasmine
+内置m...
+    
+
+        <a href="/2016/02/10/673/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/jest/">jest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-es6-basic"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/01/24/667/">ES6的核心语法与应用</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        一直以来都对ES6嗤之以鼻，本来灵活简单的Javascrit，非得为了提升B格，增加学习的成本，搞那么多鸡肋的语法。但是无奈俺们这些“老年jser”都被历史的车轮碾压了，现在如果不掌握ES6，估计很多代码都看不懂了。没有闲暇的午后时间来系统的学习ES6（其实还是有点抵触心理），但是为了跟上“年轻人”的步伐，随着用随着看随着学吧。力求以最简单的语言讲述。
+模块定义模块语法为：
+
+export ...
+    
+
+        <a href="/2016/01/24/667/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-polymer"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-12-31 04:04:54" datetime="2015-12-30T20:04:54.000Z"  itemprop="datePublished">2015-12-31</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/12/31/650/">前端自动化测试之单元测试（一）—— polymer组件的测试工具</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        单元测试的工具们
+单元测试框架
+*   Qunit - jquery的单测工具
+
+jasmine - 早期的测试框架
+mocha - 常用框架 支持BDD和TDD
+Cucumber - 语义化更好的测试工具
+
+
+断言
+*   chai
+
+集成
+*   Karma
+
+jenkins
+travis-ci
+
+
+mock
+*   sinon
+
+supertest
+
+
+组件测试框架
+*   polym...
+    
+
+        <a href="/2015/12/31/650/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/polymer/">polymer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/unit-test/">unit test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components/">web components</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components-tester/">web-components-tester</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-sion"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-12-26 13:10:16" datetime="2015-12-26T05:10:16.000Z"  itemprop="datePublished">2015-12-26</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/12/26/640/">前端自动化测试基础-sinon篇章</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        sinon用途
+在测试领域 Test double是很重要的一个概念。Test double主要用在自动化测试领域，会使用简单的对象或者流程模拟对应的行为减少测试的复杂性。
+用于 JavaScript 的测试监视(spy)、桩(stub)和仿制(mock)功能。不依赖其他类库，兼容任何单元测试框架。
+
+sinon spy（最常用）
+test spy 是这样的一类函数，它可以记录自己被调用的情...
+    
+
+        <a href="/2015/12/26/640/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/sinon/">sinon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-responsive"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-11-22 07:26:47" datetime="2015-11-21T23:26:47.000Z"  itemprop="datePublished">2015-11-22</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/responsive-design/">responsive design</a></li></ul></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/11/22/622/">响应式设计的自动化测试</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        响应式设计介绍响应式设计（RWD）从2010年开始就逐渐进入人们的视线，虽然由于网速和网络的制约，目前国内都是采用针对pc和移动分别开发站点的策略，例如淘宝网的首页在pc端网页 ，在移动端的网页为网页，使用的是基于REM的布局设计。但是没人能否认响应式设计的重要性和简便性。响应式设计其实简单来说就是利用media query针对不同的设备和分辨率采用不同的css样式，用以达到网站在各个设备上...
+    
+
+        <a href="/2015/11/22/622/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI自动化测试/">UI自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/galenframework/">galenframework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/responsive-design/">responsive design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/响应式设计/">响应式设计</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-assert"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-11-11 14:32:50" datetime="2015-11-11T06:32:50.000Z"  itemprop="datePublished">2015-11-11</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/11/11/613/">前端自动化测试基础-断言篇：chai和chai插件的用法</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        chai概念 测试技术的断言框架。
+特点
+支持多种BDD/TDD断言语法
+BDD：should
+BDD：expect
+TDD：assert
+
+
+可用在browser端和node端。
+可以和很多测试框架结合例如mocha jasmine等进行单元和UI测试。
+
+安装1npm install chai
+用法browser端12345&lt;script src="//cdn.bootcss.co...
+    
+
+        <a href="/2015/11/11/613/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai-as-promise/">chai as promise</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ui测试/">ui测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/单元测试/">单元测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/断言/">断言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-appium-install"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-10-22 09:08:14" datetime="2015-10-22T01:08:14.000Z"  itemprop="datePublished">2015-10-22</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/10/22/593/">Appium的源码编译安装</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Appium是现在比较活跃的开源自动化测试平台，因为更新速度很快，建议编译安装，了解其更多有意思的功能。Appium支持ios android selendroid的自动化测试。在mac下配置ios环境还是相对简单的，但是android真机的配置就不是那么简单了，在此详细记录基于源码的编译安装。
+准备工作 node
+git clone https://github.com/appium/ap...
+    
+
+        <a href="/2015/10/22/593/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-mocha"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-10-13 08:05:22" datetime="2015-10-13T00:05:22.000Z"  itemprop="datePublished">2015-10-13</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/">nodjs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/10/13/581/">前端自动化测试基础-mocha篇</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        安装1npm install -g mocha
+命令行用法常用的命令行为：
+1mocha -u bdd -R spec -t 5000 --recursive
+
+-u：测试方式 bdd|tdd|exports
+-R：选择报表的展现方式，报表展现方式，默认为spec，附加的 例如mocha-lcov-reporter（需要自己安装）
+-t：超时时间设置，当测试中有异步的时候如果超过设定时间会退...
+    
+
+        <a href="/2015/10/13/581/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/bdd/">bdd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/异步/">异步</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-f2e-testing-basic"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2015-10-08 06:41:01" datetime="2015-10-07T22:41:01.000Z"  itemprop="datePublished">2015-10-08</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/10/08/571/">前端UI自动化测试</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        测试手段UI测试目前主要有方式：
+
+record-and-replay: 主要是指利用录制工具去记录用户的行为，并且把这种“行为“存储到脚本中，以便将来用于检测程序或应用是否能够产出预期的效果。常用的record-and-replay工具有：微软的RPF以及google早期出品的abite。
+e2e测试(end-to-end testing)：这种测试方式不光可以测试UI层，还可以将整个系统...
+    
+
+        <a href="/2015/10/08/571/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/selenium/">selenium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/wd-js/">wd.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webdriver/">webdriver</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+<nav id="page-nav">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    </div>
+</nav>
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Dr Meng &copy; 2017</span>
+        </p>
+        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17021258号</a></p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/&title=萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/&title=萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=萌小主前端部落&url=https://mengbaby.github.io/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3aQY7EIAwEwPn/p7MPGEHaOLAZqTiNVitSycHCbT6feF2DNfqf77+P9vzsWLi4uG3uNV1zSr7DN3G0/3wHXFzck9x5oRn9Hr1M5/eNDRcX95Xc/OzR+QS4uLi/xZ2Xrby9wcXFfT83aX7mxasTrGzp1XBxcRvcPKXc93tLvouLi7vEvYpr7cXygnXzdFxc3CPcTuSRDFry9il5Li4u7kluMvKsFqlnr3oU6iUuLu6j3OowtXpwycexhQMWLi7uBm4CSi5aVRGLQQwuLu4Rbh5n5EPT5MWShmqx+cHFxd3AXds0KUZbejVcXNwN3KQwtWKLoCQVChkuLu6/cvPDRzV4rV7PuunVcHFxN3N3DE2rn6NQyHBxcbdx88BiLfjoDFlvolJcXNzj3E4j1Lm8FZVIXFzcg9y1scr80LNW4OY74+LinuTmA9TqCOTmyFIdwODi4m7mXsXV70FaF7ZwcXGPcNeuRKxFIXn8+kDUgouL2+bmoUYemyYHmrVYFhcX9yQ3H2lUo8/qUSbq1XBxcX+EWz3KtK5f4OLivoybX5uovlhUu3BxcQ9y1y5PPEUvfCxcXNwj3M7jqw+rfpRWvouLi7vC/QM++Fyb5TBHbAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '点我点我点我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
