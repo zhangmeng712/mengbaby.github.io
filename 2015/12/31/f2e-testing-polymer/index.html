@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>前端自动化测试之单元测试（一）—— polymer组件的测试工具 | 萌小主前端部落 | the more you know the more you know you don&#39;t know</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="javascript,前端单元测试,polymer,unit test,web components,web-components-tester">
+    <meta name="description" content="单元测试的工具们 单元测试框架 *   Qunit - jquery的单测工具  jasmine - 早期的测试框架 mocha - 常用框架 支持BDD和TDD Cucumber - 语义化更好的测试工具   断言 *   chai  集成 *   Karma  jenkins travis-ci   mock *   sinon  supertest   组件测试框架 *   polymer的">
+<meta name="keywords" content="javascript,前端单元测试,polymer,unit test,web components,web-components-tester">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端自动化测试之单元测试（一）—— polymer组件的测试工具">
+<meta property="og:url" content="https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/index.html">
+<meta property="og:site_name" content="萌小主前端部落">
+<meta property="og:description" content="单元测试的工具们 单元测试框架 *   Qunit - jquery的单测工具  jasmine - 早期的测试框架 mocha - 常用框架 支持BDD和TDD Cucumber - 语义化更好的测试工具   断言 *   chai  集成 *   Karma  jenkins travis-ci   mock *   sinon  supertest   组件测试框架 *   polymer的">
+<meta property="og:image" content="https://img.alicdn.com/tps/TB1lCyvLpXXXXcwXpXXXXXXXXXX-1335-558.jpg">
+<meta property="og:image" content="https://img.alicdn.com/tps/TB1iSqbLpXXXXa0aXXXXXXXXXXX-991-247.jpg">
+<meta property="og:updated_time" content="2017-04-17T05:55:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端自动化测试之单元测试（一）—— polymer组件的测试工具">
+<meta name="twitter:description" content="单元测试的工具们 单元测试框架 *   Qunit - jquery的单测工具  jasmine - 早期的测试框架 mocha - 常用框架 支持BDD和TDD Cucumber - 语义化更好的测试工具   断言 *   chai  集成 *   Karma  jenkins travis-ci   mock *   sinon  supertest   组件测试框架 *   polymer的">
+<meta name="twitter:image" content="https://img.alicdn.com/tps/TB1lCyvLpXXXXcwXpXXXXXXXXXX-1335-558.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="萌小主前端部落" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpeg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Dr Meng</h5>
+          <a href="mailto:zhangmeng712@gmail.com" title="zhangmeng712@gmail.com" class="mail">zhangmeng712@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhangmeng712"  >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端自动化测试之单元测试（一）—— polymer组件的测试工具</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端自动化测试之单元测试（一）—— polymer组件的测试工具</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2015-12-30T20:04:54.000Z" itemprop="datePublished" class="page-time">
+  2015-12-31
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#单元测试的工具们"><span class="post-toc-number">1.</span> <span class="post-toc-text">单元测试的工具们</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#why-web-component-tester"><span class="post-toc-number">2.</span> <span class="post-toc-text">why web-component-tester</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#API方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">API方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本API"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">基本API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特殊的方法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">特殊的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于template-binding异步的测试"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">关于template binding异步的测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#google-map-component测试实例"><span class="post-toc-number">4.</span> <span class="post-toc-text">google map component测试实例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wct运行机制"><span class="post-toc-number">5.</span> <span class="post-toc-text">wct运行机制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#辅助工具"><span class="post-toc-number">6.</span> <span class="post-toc-text">辅助工具</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-f2e-testing-polymer"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端自动化测试之单元测试（一）—— polymer组件的测试工具</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2015-12-31 04:04:54" datetime="2015-12-30T20:04:54.000Z"  itemprop="datePublished">2015-12-31</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="单元测试的工具们"><a href="#单元测试的工具们" class="headerlink" title="单元测试的工具们"></a>单元测试的工具们</h2><ul>
+<li><p>单元测试框架</p>
+<pre><code>*   Qunit - jquery的单测工具
+</code></pre><ul>
+<li>jasmine - 早期的测试框架</li>
+<li>mocha - 常用框架 支持BDD和TDD</li>
+<li>Cucumber - 语义化更好的测试工具</li>
+</ul>
+</li>
+<li><p>断言</p>
+<pre><code>*   chai
+</code></pre></li>
+<li><p>集成</p>
+<pre><code>*   Karma
+</code></pre><ul>
+<li>jenkins</li>
+<li>travis-ci</li>
+</ul>
+</li>
+<li><p>mock</p>
+<pre><code>*   sinon
+</code></pre><ul>
+<li>supertest</li>
+</ul>
+</li>
+<li><p>组件测试框架</p>
+<pre><code>*   polymer的单测工具：web-component-tester
+</code></pre><ul>
+<li>react的单测工具：Jest</li>
+</ul>
+</li>
+</ul>
+<p>之前的博客对比较基础的测试工具都有所介绍，参考前端自动化测试基础篇，在这篇blog中，我们首先了解一下polymer组件的单元测试工具。</p>
+<ul>
+<li><a href="http://dj1211.com/?p=581" target="_blank" rel="external">mocha</a></li>
+<li><a href="http://dj1211.com/?p=613" target="_blank" rel="external">chai</a></li>
+<li><a href="http://dj1211.com/?p=640" target="_blank" rel="external">sinon</a></li>
+</ul>
+<h2 id="why-web-component-tester"><a href="#why-web-component-tester" class="headerlink" title="why web-component-tester"></a>why web-component-tester</h2><p><a href="https://github.com/Polymer/web-component-tester" target="_blank" rel="external">web-component-tester</a>是polymer组件用于单元测试的框架,主要是用作对于html文件的测试</p>
+<ul>
+<li>它内部集成了mocha、sinon、sinon-chai、chai，方便使用</li>
+<li>使用lodash作为工具函数</li>
+<li>async用作异步函数的测试</li>
+<li>test-fixture作为<template>模板的测试</template></li>
+<li>accessibility-developer-tools将测试结果输出到命令行中。</li>
+<li>在server端wct内置selenium-standalone，在客户端使用wd.js操作服务器进行测试</li>
+</ul>
+<h2 id="API方法"><a href="#API方法" class="headerlink" title="API方法"></a>API方法</h2><h3 id="基本API"><a href="#基本API" class="headerlink" title="基本API"></a>基本API</h3><ul>
+<li>WCT.loadSuites可以将</li>
+<li>suite类似describe将测试进行归类</li>
+<li>test类似it进行具体的测试</li>
+<li><p>assert用于进行断言，断言同chai的assert的断言规则</p>
+<p>suite(‘AwesomeLib’, function() {<br>  test(‘is awesome’, function() {</p>
+<pre><code>assert.isTrue(AwesomeLib.awesome);//TDD模式
+</code></pre><p>  });<br>});<br>`</p>
+<h3 id="特殊的方法"><a href="#特殊的方法" class="headerlink" title="特殊的方法"></a>特殊的方法</h3></li>
+<li><p>text-fixture 用来在测试过程中操作template中的dom元素，用法是在<template>外部用<test-fixture>包裹起来。然后就可以通过<br>fixture获取元素，按照dom进行操作。</test-fixture></template></p>
+<pre>`&lt;test-fixture id="simple"&gt;
+  &lt;template&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/template&gt;
+&lt;/test-fixture&gt;
+&lt;script&gt;
+  suite('classList', function() {
+    var div;
+    setup(function() {
+      div = fixture('simple');
+    })
+    test('foo', function() {
+      div.classList.add('foo');
+      assertSomethingOrOther(div);
+    });
+  });
+&lt;/script&gt;
+`</pre>
+
+<h3 id="关于template-binding异步的测试"><a href="#关于template-binding异步的测试" class="headerlink" title="关于template binding异步的测试"></a>关于template binding异步的测试</h3><p>异步测试在javascript的世界中可谓最常见，对于polymer组件来说，数据驱动模板刷新很重要，<br>模板数据的刷新会调用Polymer.dom.flush, 它是个异步的过程，对此 web-components-tester 专门提供<br>flush函数处理此类异步。</p>
+<pre>`suite('with two selected items', function() {
+  // Clean up after ourselves.
+  teardown(function(done) {
+    s.clearSelection();
+    s.multi = false;
+    // Wait for observers to resolve before moving on to more tests.
+    flush(done);
+  });
+
+  test('multi selects by index', function(done) {
+    s.multi = true;
+    //数据变化
+    s.selected = [0, 2];
+    flush(function() {
+      //模板刷新
+      assert.equal(s.selectedIndex, [0, 2]);
+      assert(s.children[0].classList.contains('core-selected'));
+      assert(!s.children[1].classList.contains('core-selected'));
+      assert(s.children[2].classList.contains('core-selected'));
+      done();
+    });
+  });
+
+});
+`</pre>
+
+<h2 id="google-map-component测试实例"><a href="#google-map-component测试实例" class="headerlink" title="google map component测试实例"></a>google map component测试实例</h2></li>
+<li><p>代码参考，<a href="https://github.com/zhangmeng712/f2e-testing/tree/master/un-tests/tests/polymer/test" target="_blank" rel="external">f2e test</a></p>
+</li>
+<li>1、安装 web-components-tester： npm install -g web-component-tester</li>
+<li><p>2 建立test文件夹（默认地址）</p>
+<pre><code>*   2.1 index.html
+</code></pre><ul>
+<li>2.2 google-map-marker.html</li>
+<li>2.3 marker.js</li>
+</ul>
+<pre>`
+suite('markers default', function () {
+    var map;
+    setup(function () {
+        map = document.querySelector('#map');
+    });
+
+    test('markers are initialized', function () {
+        var markerEl = Polymer.dom(map).querySelector('google-map-marker');
+        assert.isUndefined(markerEl.marker);
+        assert.isUndefined(markerEl.map);
+        assert.isNull(markerEl.info);
+        assert.equal(markerEl.latitude, 37.779);
+        assert.equal(markerEl.longitude, -122.3892);
+    });
+
+    test('markers are added to map', function () {
+        map.addEventListener('google-map-ready', function () {
+            var mapMarkerEl = Polymer.dom(map).querySelector('google-map-marker');
+            var firstMarker = map.markers[0];
+            expect(firstMarker).to.deep.equal(mapMarkerEl);
+            assert.equal(map.markers.length, 3);
+        });
+    });
+
+    test('markers position can be updated', function (done) {
+        map.addEventListener('google-map-ready', function (e) {
+            var markerEl = Polymer.dom(map).querySelector('google-map-marker');
+            markerEl.latitude = 37.79493;
+            markerEl.longitude = -122.41942;
+            markerEl.zIndex = 1;
+            assert.equal(markerEl.map, map.map, "marker's map is not the google-map's");
+            //重新渲染 异步过程
+            Polymer.dom.flush();
+            async.nextTick(function () {
+                var marker = markerEl.marker;
+                assert.equal(marker.getPosition().lat(), markerEl.latitude);
+                assert.equal(marker.getPosition().lng(), markerEl.longitude);
+                assert.equal(marker.getZIndex(), markerEl.zIndex);
+                done();
+            });
+        });
+    });
+});
+`</pre>
+</li>
+<li><p>3 运行测试脚本 wct 即可。<br><img src="https://img.alicdn.com/tps/TB1lCyvLpXXXXcwXpXXXXXXXXXX-1335-558.jpg" alt=""><br><img src="https://img.alicdn.com/tps/TB1iSqbLpXXXXa0aXXXXXXXXXXX-991-247.jpg" alt=""></p>
+<h2 id="wct运行机制"><a href="#wct运行机制" class="headerlink" title="wct运行机制"></a>wct运行机制</h2><p>代码：<a href="https://github.com/Polymer/web-component-tester/tree/master/runner" target="_blank" rel="external">runner</a></p>
+<ul>
+<li>建立webserver，模板参见<a href="https://github.com/Polymer/web-component-tester/blob/master/data/index.html" target="_blank" rel="external">index.html</a></li>
+<li>读取wct.conf.json配置</li>
+<li>内置selenium server 通过wd.js建立连接打开浏览器进行测试</li>
+<li>并将结果通过socketIO返回显示在命令行</li>
+<li>测试框架核心：browser.js， <a href="https://github.com/Polymer/web-component-tester/tree/master/browser" target="_blank" rel="external">源码</a>内置chai mocha sinon socket等以及polymer测试的辅助函数</li>
+</ul>
+<h2 id="辅助工具"><a href="#辅助工具" class="headerlink" title="辅助工具"></a>辅助工具</h2><p>在测试中少不了点击事件的模拟，wct这个工具不具有这个功能，但是可以使用polymer的工具组件<a href="https://github.com/PolymerElements/iron-test-helpers" target="_blank" rel="external">iron-test-helpers</a><br>它内置了MockInteraction可以实现各个事件的模拟，只需import iron-test-helpers.html 即可。使用方法如下：</p>
+<p><pre>`test(‘can be triggered with space’, function(done) {<br>  button.addEventListener(‘keydown’, function() {</pre></p>
+<pre><code>done();
+</code></pre><p>  });<br>  MockInteractions.pressSpace(button);<br>});</p>
+<p>test(‘can be clicked’, function(done) {<br>  button.addEventListener(‘click’, function() {</p>
+<pre><code>done();
+</code></pre><p>  });<br>  MockInteractions.tap(button);<br>});</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-17T05:55:31.000Z" itemprop="dateUpdated">2017-04-17 13:55:31</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2015/12/31/f2e-testing-polymer/" target="_blank" rel="external">https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/</a>
+    </div>
+    <footer>
+        <a href="https://mengbaby.github.io">
+            <img src="/img/avatar.jpeg" alt="Dr Meng">
+            Dr Meng
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/polymer/">polymer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/unit-test/">unit test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components/">web components</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components-tester/">web-components-tester</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&title=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&title=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2015/12/26/f2e-testing-sion/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端自动化测试基础-sinon篇章</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/01/24/es6-basic/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES6的核心语法与应用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'data4q-com';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Dr Meng &copy; 2017</span>
+        </p>
+        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17021258号</a></p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&title=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&title=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试之单元测试（一）—— polymer组件的测试工具》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQXLDMAgF0N7/0ukBkng+oHbG+GmVSV1bzwuCgJ+feL3e1vtfv13/7Zr377/d/9jCwMC4LeN1uZJtXW8xX9ew61eJgYHxBEYSCq9jXRJAk5BaDdMYGBgY1ZCab+46sGJgYGBMGNX0MT+aYmBgYFwzqgfL6/+tluqSV3PsLI6BgXFDRl51///Pf9LfwMDAuBWjV7jPW4/VI25vYWBg7GbkAW50vIzLbZP9YGBg7GYkA17z4Yxew2CULGJgYKxjTIJgr1WQPD0f48DAwHgOYxJYewX9fOvNfiwGBsZSRhIQ84Cbtyonz8LAwNjKyAPlJH3Mg2aztYCBgbGakWy9WhqrNjUnT/zQ38DAwFjH6B1B80NsvpX8iPvhPhgYGKsZ87JXtemYp5WjbBcDA2MRo9du7DUv88GO8rAFBgbGakZ1qKJXVkuSv3wg4+s1GBgYSxn5MfVUO6FXpItCLQYGxmpGL3ROximSbwp7w8DAWM2o3q6X5CXhfpTbYmBgPJhxqlhWHb+ohngMDIxnMiaPLzy4lXSW81wMDIxFjGpiNxnXiKY/iq8VAwNjK+NVXL00sdrarA7FYmBg7GbMm53Vg2i19J8nixgYGLsZ85GL6hF0HqzLvx4YGBgrGNXAd3Y4LP8FKDcGMDAwHsmYpI+9I260BwwMDIxxQa3azkxaDgcCLgYGxq0YeWKXh9pT7YHD5TYMDIwbMk4NUlTTwSSg558xMDCWMn4Bqu6odlAbAnAAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '点我点我点我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

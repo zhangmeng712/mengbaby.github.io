@@ -17,8 +17,8 @@
   
   <entry>
     <title>前端自动化测试（三）- angular和protracor</title>
-    <link href="https://mengbaby.github.io/2016/03/10/678/"/>
-    <id>https://mengbaby.github.io/2016/03/10/678/</id>
+    <link href="https://mengbaby.github.io/2016/03/10/f2e-testing-angular/"/>
+    <id>https://mengbaby.github.io/2016/03/10/f2e-testing-angular/</id>
     <published>2016-03-09T20:53:58.000Z</published>
     <updated>2017-04-17T07:02:37.000Z</updated>
     
@@ -129,8 +129,8 @@
   
   <entry>
     <title>前端自动化测试之单元测试（二）—— react组件的测试工具jest</title>
-    <link href="https://mengbaby.github.io/2016/02/10/673/"/>
-    <id>https://mengbaby.github.io/2016/02/10/673/</id>
+    <link href="https://mengbaby.github.io/2016/02/10/f2e-testing-jest/"/>
+    <id>https://mengbaby.github.io/2016/02/10/f2e-testing-jest/</id>
     <published>2016-02-09T22:47:02.000Z</published>
     <updated>2017-04-17T07:15:39.000Z</updated>
     
@@ -209,8 +209,8 @@
   
   <entry>
     <title>ES6的核心语法与应用</title>
-    <link href="https://mengbaby.github.io/2016/01/24/667/"/>
-    <id>https://mengbaby.github.io/2016/01/24/667/</id>
+    <link href="https://mengbaby.github.io/2016/01/24/es6-basic/"/>
+    <id>https://mengbaby.github.io/2016/01/24/es6-basic/</id>
     <published>2016-01-24T06:28:03.000Z</published>
     <updated>2017-04-17T07:22:29.000Z</updated>
     
@@ -267,8 +267,8 @@
   
   <entry>
     <title>前端自动化测试之单元测试（一）—— polymer组件的测试工具</title>
-    <link href="https://mengbaby.github.io/2015/12/31/650/"/>
-    <id>https://mengbaby.github.io/2015/12/31/650/</id>
+    <link href="https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/"/>
+    <id>https://mengbaby.github.io/2015/12/31/f2e-testing-polymer/</id>
     <published>2015-12-30T20:04:54.000Z</published>
     <updated>2017-04-17T05:55:31.000Z</updated>
     
@@ -478,8 +478,8 @@ suite('markers default', function () {
   
   <entry>
     <title>前端自动化测试基础-sinon篇章</title>
-    <link href="https://mengbaby.github.io/2015/12/26/640/"/>
-    <id>https://mengbaby.github.io/2015/12/26/640/</id>
+    <link href="https://mengbaby.github.io/2015/12/26/f2e-testing-sion/"/>
+    <id>https://mengbaby.github.io/2015/12/26/f2e-testing-sion/</id>
     <published>2015-12-26T05:10:16.000Z</published>
     <updated>2017-04-17T07:20:04.000Z</updated>
     
@@ -586,8 +586,8 @@ suite('markers default', function () {
   
   <entry>
     <title>响应式设计的自动化测试</title>
-    <link href="https://mengbaby.github.io/2015/11/22/622/"/>
-    <id>https://mengbaby.github.io/2015/11/22/622/</id>
+    <link href="https://mengbaby.github.io/2015/11/22/f2e-testing-responsive/"/>
+    <id>https://mengbaby.github.io/2015/11/22/f2e-testing-responsive/</id>
     <published>2015-11-21T23:26:47.000Z</published>
     <updated>2017-04-17T07:19:28.000Z</updated>
     
@@ -810,9 +810,9 @@ suite('markers default', function () {
       <category term="responsive design" scheme="https://mengbaby.github.io/categories/nodejs/testing/responsive-design/"/>
     
     
-      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
-    
       <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+    
+      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
     
       <category term="css3" scheme="https://mengbaby.github.io/Mtags/css3/"/>
     
@@ -828,8 +828,8 @@ suite('markers default', function () {
   
   <entry>
     <title>前端自动化测试基础-断言篇：chai和chai插件的用法</title>
-    <link href="https://mengbaby.github.io/2015/11/11/613/"/>
-    <id>https://mengbaby.github.io/2015/11/11/613/</id>
+    <link href="https://mengbaby.github.io/2015/11/11/f2e-testing-assert/"/>
+    <id>https://mengbaby.github.io/2015/11/11/f2e-testing-assert/</id>
     <published>2015-11-11T06:32:50.000Z</published>
     <updated>2017-04-17T07:46:39.000Z</updated>
     
@@ -998,8 +998,8 @@ suite('markers default', function () {
   
   <entry>
     <title>Appium的源码编译安装</title>
-    <link href="https://mengbaby.github.io/2015/10/22/593/"/>
-    <id>https://mengbaby.github.io/2015/10/22/593/</id>
+    <link href="https://mengbaby.github.io/2015/10/22/appium-install/"/>
+    <id>https://mengbaby.github.io/2015/10/22/appium-install/</id>
     <published>2015-10-22T01:08:14.000Z</published>
     <updated>2017-04-17T05:59:55.000Z</updated>
     
@@ -1092,15 +1092,15 @@ suite('markers default', function () {
       <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
     
     
+      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
+    
+      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+    
       <category term="android" scheme="https://mengbaby.github.io/Mtags/android/"/>
     
       <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
     
       <category term="ios" scheme="https://mengbaby.github.io/Mtags/ios/"/>
-    
-      <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
-    
-      <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
     
       <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
@@ -1108,8 +1108,8 @@ suite('markers default', function () {
   
   <entry>
     <title>前端自动化测试基础-mocha篇</title>
-    <link href="https://mengbaby.github.io/2015/10/13/581/"/>
-    <id>https://mengbaby.github.io/2015/10/13/581/</id>
+    <link href="https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/"/>
+    <id>https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/</id>
     <published>2015-10-13T00:05:22.000Z</published>
     <updated>2017-04-17T07:16:45.000Z</updated>
     
@@ -1184,8 +1184,8 @@ suite('markers default', function () {
   
   <entry>
     <title>前端UI自动化测试</title>
-    <link href="https://mengbaby.github.io/2015/10/08/571/"/>
-    <id>https://mengbaby.github.io/2015/10/08/571/</id>
+    <link href="https://mengbaby.github.io/2015/10/08/f2e-testing-basic/"/>
+    <id>https://mengbaby.github.io/2015/10/08/f2e-testing-basic/</id>
     <published>2015-10-07T22:41:01.000Z</published>
     <updated>2017-04-17T07:13:37.000Z</updated>
     
@@ -1322,9 +1322,9 @@ suite('markers default', function () {
       <category term="testing" scheme="https://mengbaby.github.io/categories/nodejs/testing/"/>
     
     
-      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
-    
       <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
+    
+      <category term="appium" scheme="https://mengbaby.github.io/Mtags/appium/"/>
     
       <category term="自动化测试" scheme="https://mengbaby.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
@@ -1342,8 +1342,8 @@ suite('markers default', function () {
   
   <entry>
     <title>browserify和webpack快速配置入门教程</title>
-    <link href="https://mengbaby.github.io/2015/09/21/556/"/>
-    <id>https://mengbaby.github.io/2015/09/21/556/</id>
+    <link href="https://mengbaby.github.io/2015/09/21/browserify-and-webpack/"/>
+    <id>https://mengbaby.github.io/2015/09/21/browserify-and-webpack/</id>
     <published>2015-09-21T01:04:12.000Z</published>
     <updated>2017-04-17T06:05:28.000Z</updated>
     
@@ -1414,11 +1414,11 @@ suite('markers default', function () {
       <category term="workflow" scheme="https://mengbaby.github.io/categories/javascript/workflow/"/>
     
     
+      <category term="browserify" scheme="https://mengbaby.github.io/Mtags/browserify/"/>
+    
       <category term="javascript" scheme="https://mengbaby.github.io/Mtags/javascript/"/>
     
       <category term="nodejs" scheme="https://mengbaby.github.io/Mtags/nodejs/"/>
-    
-      <category term="browserify" scheme="https://mengbaby.github.io/Mtags/browserify/"/>
     
       <category term="webpack" scheme="https://mengbaby.github.io/Mtags/webpack/"/>
     
@@ -1432,8 +1432,8 @@ suite('markers default', function () {
   
   <entry>
     <title>React生命周期、API和深入用法</title>
-    <link href="https://mengbaby.github.io/2015/09/06/450/"/>
-    <id>https://mengbaby.github.io/2015/09/06/450/</id>
+    <link href="https://mengbaby.github.io/2015/09/06/react-depth/"/>
+    <id>https://mengbaby.github.io/2015/09/06/react-depth/</id>
     <published>2015-09-06T03:04:22.000Z</published>
     <updated>2017-04-17T07:55:18.000Z</updated>
     
@@ -1618,8 +1618,8 @@ suite('markers default', function () {
   
   <entry>
     <title>mobile H5布局大全-rem flexbox详解</title>
-    <link href="https://mengbaby.github.io/2015/03/15/369/"/>
-    <id>https://mengbaby.github.io/2015/03/15/369/</id>
+    <link href="https://mengbaby.github.io/2015/03/15/mobile-layout/"/>
+    <id>https://mengbaby.github.io/2015/03/15/mobile-layout/</id>
     <published>2015-03-15T01:29:14.000Z</published>
     <updated>2017-04-17T07:21:17.000Z</updated>
     
@@ -1839,8 +1839,8 @@ align-items:center;
   
   <entry>
     <title>css3和动画-part1-变换</title>
-    <link href="https://mengbaby.github.io/2015/02/03/332/"/>
-    <id>https://mengbaby.github.io/2015/02/03/332/</id>
+    <link href="https://mengbaby.github.io/2015/02/03/css3-animation-part1/"/>
+    <id>https://mengbaby.github.io/2015/02/03/css3-animation-part1/</id>
     <published>2015-02-03T03:15:22.000Z</published>
     <updated>2017-04-17T06:26:29.000Z</updated>
     

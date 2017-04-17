@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>前端自动化测试基础-mocha篇 | 萌小主前端部落 | the more you know the more you know you don&#39;t know</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="nodejs,自动化测试,chai,mocha,前端,bdd,异步">
+    <meta name="description" content="安装1npm install -g mocha 命令行用法常用的命令行为： 1mocha -u bdd -R spec -t 5000 --recursive  -u：测试方式 bdd|tdd|exports -R：选择报表的展现方式，报表展现方式，默认为spec，附加的 例如mocha-lcov-reporter（需要自己安装） -t：超时时间设置，当测试中有异步的时候如果超过设定时间会退出测试">
+<meta name="keywords" content="nodejs,自动化测试,chai,mocha,前端,bdd,异步">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端自动化测试基础-mocha篇">
+<meta property="og:url" content="https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/index.html">
+<meta property="og:site_name" content="萌小主前端部落">
+<meta property="og:description" content="安装1npm install -g mocha 命令行用法常用的命令行为： 1mocha -u bdd -R spec -t 5000 --recursive  -u：测试方式 bdd|tdd|exports -R：选择报表的展现方式，报表展现方式，默认为spec，附加的 例如mocha-lcov-reporter（需要自己安装） -t：超时时间设置，当测试中有异步的时候如果超过设定时间会退出测试">
+<meta property="og:updated_time" content="2017-04-17T07:16:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端自动化测试基础-mocha篇">
+<meta name="twitter:description" content="安装1npm install -g mocha 命令行用法常用的命令行为： 1mocha -u bdd -R spec -t 5000 --recursive  -u：测试方式 bdd|tdd|exports -R：选择报表的展现方式，报表展现方式，默认为spec，附加的 例如mocha-lcov-reporter（需要自己安装） -t：超时时间设置，当测试中有异步的时候如果超过设定时间会退出测试">
+    
+        <link rel="alternate" type="application/atom+xml" title="萌小主前端部落" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.6.1/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpeg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Dr Meng</h5>
+          <a href="mailto:zhangmeng712@gmail.com" title="zhangmeng712@gmail.com" class="mail">zhangmeng712@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhangmeng712"  >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端自动化测试基础-mocha篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端自动化测试基础-mocha篇</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2015-10-13T00:05:22.000Z" itemprop="datePublished" class="page-time">
+  2015-10-13
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/">nodjs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/testing/">testing</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#命令行用法"><span class="post-toc-number">2.</span> <span class="post-toc-text">命令行用法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#describe-it-hook"><span class="post-toc-number">3.</span> <span class="post-toc-text">describe it hook</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mocha和BDD测试"><span class="post-toc-number">4.</span> <span class="post-toc-text">mocha和BDD测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#异步的处理"><span class="post-toc-number">5.</span> <span class="post-toc-text">异步的处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#执行顺序"><span class="post-toc-number">6.</span> <span class="post-toc-text">执行顺序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码"><span class="post-toc-number">7.</span> <span class="post-toc-text">源码</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-f2e-testing-mocha"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端自动化测试基础-mocha篇</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2015-10-13 08:05:22" datetime="2015-10-13T00:05:22.000Z"  itemprop="datePublished">2015-10-13</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/">nodjs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodjs/testing/">testing</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g mocha</div></pre></td></tr></table></figure>
+<h2 id="命令行用法"><a href="#命令行用法" class="headerlink" title="命令行用法"></a>命令行用法</h2><p>常用的命令行为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mocha -u bdd -R spec -t 5000 --recursive</div></pre></td></tr></table></figure>
+<ul>
+<li>-u：测试方式 bdd|tdd|exports</li>
+<li>-R：选择报表的展现方式，报表展现方式，默认为spec，附加的 例如mocha-lcov-reporter（需要自己安装）</li>
+<li>-t：超时时间设置，当测试中有异步的时候如果超过设定时间会退出测试，默认2s</li>
+<li>–recursive：默认会把test文件夹和子文件夹中的所有的测试文件执行一遍</li>
+</ul>
+<p>详解参考官网<a href="http://mochajs.org/#usage" targe="_blank" target="_blank" rel="external">Usage</a></p>
+<h2 id="describe-it-hook"><a href="#describe-it-hook" class="headerlink" title="describe it hook"></a>describe it hook</h2><p>初次接触mocha的人，常常会觉得这几个概念很抽象,用简单的语言概括来说：</p>
+<ul>
+<li><p>describe:用于将测试分类，可以嵌套，范围从大到小</p>
+</li>
+<li><p>it：真正包裹测试断言的作用域</p>
+</li>
+<li><p>hook：before beforeEach after afterEach 为测试做辅助的作用域，例如 before中可以执行数据库的初始化，或者检测活动；after中用于清除使用的变量等。</p>
+</li>
+</ul>
+<h2 id="mocha和BDD测试"><a href="#mocha和BDD测试" class="headerlink" title="mocha和BDD测试"></a>mocha和BDD测试</h2><p>mocha支持bdd和tdd的测试，支持should/expect的断言方式,常和<a href="http://chaijs.com/api/bdd/" target="_blank">chai</a>结合在一起使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//npm install chai之后</span></div><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">'chai'</span>);</div><div class="line"><span class="keyword">var</span> expect = chai.expect;</div><div class="line"></div><div class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> zhangmeng = <span class="keyword">new</span> Person(<span class="string">'zhangmeng'</span>);</div><div class="line"></div><div class="line">describe(<span class="string">'zhangmeng attribute'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    it (<span class="string">'zhangmeng should be a person '</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        expect(zhangmeng).to.be.an.instanceof(Person);</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="异步的处理"><a href="#异步的处理" class="headerlink" title="异步的处理"></a>异步的处理</h2><p>在javascript的世界 测试异步程序是特别常见的，例如文件的读写、数据库的访问等等，mocha对异步的支持也特别好，你只需要在最里面的函数中增加对应的回调即可，此外mocha是支持promise的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * @fileOverView mocha-async-demo</div><div class="line"> * @author zhangmeng on 15/10/12</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="comment">//使用异步callback的方式</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">var</span> fileName = <span class="string">'/opt/local/share/nginx/html/my-git/f2e-testing/basic/files/name.json'</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> chai = <span class="built_in">require</span>(<span class="string">'chai'</span>);</div><div class="line"><span class="keyword">var</span> expect = chai.expect;</div><div class="line"><span class="keyword">var</span> Q = <span class="built_in">require</span>(<span class="string">'q'</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//使用回调的方式测试</span></div><div class="line"></div><div class="line">describe(<span class="string">'file content validation through callback'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//读取文件内容</span></div><div class="line">    <span class="keyword">var</span> fileObj = &#123;&#125;;</div><div class="line">    before(<span class="function"><span class="keyword">function</span> (<span class="params">done</span>) </span>&#123;</div><div class="line">        <span class="comment">//async</span></div><div class="line">        fs.readFile(fileName, <span class="string">'utf-8'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (err) &#123;</div><div class="line">                <span class="keyword">throw</span> err;</div><div class="line">            &#125;</div><div class="line">            fileObj = <span class="built_in">JSON</span>.parse(data);</div><div class="line">            done();</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    it (<span class="string">'expect name to be zhangmeng'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> name = fileObj.name;</div><div class="line">        expect(name).to.equal(<span class="string">"zhangmeng"</span>);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    it (<span class="string">'expect name to be zhangmeng'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> age = fileObj.age;</div><div class="line">        expect(age).to.equal(<span class="string">'29'</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//使用promise的方式例子</span></div><div class="line">describe(<span class="string">'file content validation through promise'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> fileObj = &#123;&#125;;</div><div class="line">    <span class="keyword">var</span> readFilePromise = <span class="function"><span class="keyword">function</span>(<span class="params">path, encoding</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> encoding = encoding || <span class="string">'utf-8'</span>;</div><div class="line">        <span class="keyword">var</span> deferred = Q.defer();</div><div class="line">        fs.readFile(path, encoding, <span class="function"><span class="keyword">function</span>(<span class="params">err, text</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span>(err) &#123;</div><div class="line">                deferred.reject(<span class="keyword">new</span> <span class="built_in">Error</span>(err));</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                deferred.resolve(text);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        <span class="keyword">return</span> deferred.promise;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    before(<span class="string">'read name.json'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">//return 支持promise的异步</span></div><div class="line">        <span class="keyword">return</span> readFilePromise(fileName).then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                fileObj = <span class="built_in">JSON</span>.parse(data);</div><div class="line">            &#125; <span class="keyword">catch</span>(err) &#123;</div><div class="line">                <span class="built_in">console</span>.log(err);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    it (<span class="string">'name should be zhangmeng'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="keyword">var</span> name = fileObj.name;</div><div class="line">       expect(name).to.equal(<span class="string">'zhangmeng'</span>);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    it (<span class="string">'age should be 29'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> age = fileObj.age;</div><div class="line">        expect(age).to.equal(<span class="string">'29'</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="执行顺序"><a href="#执行顺序" class="headerlink" title="执行顺序"></a>执行顺序</h2><p>关于it和hook之间的顺序，有时非常容易混淆，先上结论：</p>
+<ul>
+<li>beforeEach会对当前describe下的所有子case生效。</li>
+<li>before和after的代码没有特殊顺序要求。</li>
+<li>同一个describe下可以有多个before，执行顺序与代码顺序相同。</li>
+<li>同一个describe下的执行顺序为before, beforeEach, afterEach, after（*），见下例。</li>
+<li>当一个it有多个before的时候，执行顺序从最外围的describe的before开始，其余同理。</li>
+<li>当没有it的时候，before还有beforeEach的内容都不会执行（*）</li>
+<li>it的内容是按照顺序执行的 即使前面的it的内容完成的时间偏后，也会按照顺序执行（*）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">describe(<span class="string">'earth'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    beforeEach(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'see.. this function is run EACH time, before each describe()'</span>)</div><div class="line">    &#125;)</div><div class="line">    describe(<span class="string">'singapre'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        before(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'it will happen before beforeEach and only once'</span>)</div><div class="line">        &#125;)</div><div class="line">        it(<span class="string">'birds should fly'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">/** ... */</span> &#125;)</div><div class="line">        it(<span class="string">'horse should gallop'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">/** ... */</span> &#125;)</div><div class="line">    &#125;)</div><div class="line">    describe(<span class="string">'malaysia'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        it(<span class="string">'birds should soar'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">/** ... */</span> &#125;)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"><span class="comment">//执行结果</span></div><div class="line"><span class="comment">//earth</span></div><div class="line"><span class="comment">//singapre</span></div><div class="line"><span class="comment">//it will happen before beforeEach and only once</span></div><div class="line"><span class="comment">//see.. this function is run EACH time, before each describe()</span></div><div class="line"><span class="comment">//✓ birds should fly</span></div><div class="line"><span class="comment">//see.. this function is run EACH time, before each describe()</span></div><div class="line"><span class="comment">//✓ horse should gallop</span></div><div class="line"><span class="comment">//malaysia</span></div><div class="line"><span class="comment">//see.. this function is run EACH time, before each describe()</span></div><div class="line"><span class="comment">//✓ birds should soar</span></div></pre></td></tr></table></figure>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><ul>
+<li><a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/test/mocha-chai.js" target="_blank" rel="external">mocha与chai的结合</a></li>
+<li><a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/test/mocha-order.js" target="_blank" rel="external">mocha执行顺序</a></li>
+<li><a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/test/mocha-async-demo.js" target="_blank" rel="external">mocha的异步（callback和promise）</a></li>
+<li><a href="https://github.com/strongloop/express/tree/master/test" target="_blank" rel="external">复杂的mocha应用-express</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-04-17T07:16:45.000Z" itemprop="dateUpdated">2017-04-17 15:16:45</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2015/10/13/f2e-testing-mocha/" target="_blank" rel="external">https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/</a>
+    </div>
+    <footer>
+        <a href="https://mengbaby.github.io">
+            <img src="/img/avatar.jpeg" alt="Dr Meng">
+            Dr Meng
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/bdd/">bdd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/异步/">异步</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&title=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&title=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2015/10/08/f2e-testing-basic/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端UI自动化测试</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2015/10/22/appium-install/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Appium的源码编译安装</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'data4q-com';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Dr Meng &copy; 2017</span>
+        </p>
+        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17021258号</a></p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&title=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&pic=https://mengbaby.github.io/img/avatar.jpeg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&title=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&source=the more you know the more you know you don't know" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端自动化测试基础-mocha篇》 — 萌小主前端部落&url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/&via=https://mengbaby.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://mengbaby.github.io/2015/10/13/f2e-testing-mocha/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3awY6DMAxF0f7/TzPbkUrpfXaoFHOzqkoKOV0YO/Hrhcfxb7x/fz3/02/f73A9c8GQIUPGtozjcnyawzG1Z/H5MmTIeA6DhEJytbgI/NyP38uQIUPGDYsjAV2GDBkyOgGXFLppUSpDhgwZ14xaYclLXH719lpchgwZGzJ4KPz951vON2TIkLEV4whH7YAzvUO8KhkyZIxm9AtUVF7i5LKzHhkyZExldIIgPzxIk07ezIEuy5AhY3MGD6arDgZIEsmD8sl7Q4YMGY9h8INMvqFP/iCegJ5clSFDxlBGehiZpoPkMDJNK7/sGsqQIWMoo1OOpmXqqoBePF+VIUPGIEZ6lT94VXA/SQ1lyJAxlMEfsDbt67C/vAZkyJAxlNFpeiCMTlIYpIkyZMgYzag1Q/CmVV4At5otZMiQMZTRSdT66V2tIeNkjgwZMkYz0gYI3gyRhmlyCBG8GWTIkDGO0WmGqBXAtdAcpIkyZMgYx+BFKf8LaphiUihDhoyHMWpLJ7/i23Np2ipDhownM/gWW0pNZ6K/TIYMGQ9g8GDa2XTrt02gnhEZMmQMYhzhIItbVfoGrwEZMmSMZiyI1vimq8J067BThgwZ2zI6QbZYcOLElIRsGTJkPIfBA196DJCmfSRwy5AhQ0a6WZYuiITU+M4yZMiQEQbfzpYZb7lYEHBlyJCxFYOEUdLale7wkScu3m6TIUPGhoy0dOQJXyehTA9NZciQMZTxB12TS6kmVzuVAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.6.1/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '点我点我点我！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
