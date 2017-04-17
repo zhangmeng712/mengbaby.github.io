@@ -40,9 +40,9 @@
          
         <tag>chai</tag>
          
-        <tag>chai as promise</tag>
-         
         <tag>mocha</tag>
+         
+        <tag>chai as promise</tag>
          
         <tag>ui测试</tag>
          
@@ -203,13 +203,13 @@
          
         <tag>自动化测试</tag>
          
-        <tag>chai</tag>
-         
-        <tag>mocha</tag>
-         
         <tag>前端</tag>
          
         <tag>bdd</tag>
+         
+        <tag>chai</tag>
+         
+        <tag>mocha</tag>
          
         <tag>异步</tag>
          
