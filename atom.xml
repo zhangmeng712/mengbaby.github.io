@@ -117,11 +117,11 @@
       <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
+    
       <category term="angular" scheme="https://zhangmeng712.github.io/Mtags/angular/"/>
     
       <category term="e2e" scheme="https://zhangmeng712.github.io/Mtags/e2e/"/>
-    
-      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
       <category term="protractor" scheme="https://zhangmeng712.github.io/Mtags/protractor/"/>
     
@@ -195,13 +195,13 @@
       <category term="Uncategorized" scheme="https://zhangmeng712.github.io/categories/Uncategorized/"/>
     
     
-      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
-    
       <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="jest" scheme="https://zhangmeng712.github.io/Mtags/jest/"/>
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
       <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
+    
+      <category term="jest" scheme="https://zhangmeng712.github.io/Mtags/jest/"/>
     
       <category term="前端单元测试" scheme="https://zhangmeng712.github.io/Mtags/%E5%89%8D%E7%AB%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
@@ -244,7 +244,7 @@
 <h3 id="state和props初始化"><a href="#state和props初始化" class="headerlink" title="state和props初始化"></a>state和props初始化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// The ES5 way</span></div><div class="line"><span class="keyword">var</span> Video = React.createClass(&#123;</div><div class="line">  <span class="attr">getDefaultProps</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">autoPlay</span>: <span class="literal">false</span>,</div><div class="line">      <span class="attr">maxLoops</span>: <span class="number">10</span>,</div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">getInitialState</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">loopsRemaining</span>: <span class="keyword">this</span>.props.maxLoops,</div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">propTypes</span>: &#123;</div><div class="line">    <span class="attr">autoPlay</span>: React.PropTypes.bool.isRequired,</div><div class="line">    <span class="attr">maxLoops</span>: React.PropTypes.number.isRequired,</div><div class="line">    <span class="attr">posterFrameSrc</span>: React.PropTypes.string.isRequired,</div><div class="line">    <span class="attr">videoSrc</span>: React.PropTypes.string.isRequired,</div><div class="line">  &#125;,</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// The ES6+ way</span></div><div class="line"><span class="comment">// static 实现只读的props</span></div><div class="line"><span class="comment">// 全局state</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Video</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">static</span> defaultProps = &#123;</div><div class="line">    <span class="attr">autoPlay</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">maxLoops</span>: <span class="number">10</span>,</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">static</span> propTypes = &#123;</div><div class="line">    <span class="attr">autoPlay</span>: React.PropTypes.bool.isRequired,</div><div class="line">    <span class="attr">maxLoops</span>: React.PropTypes.number.isRequired,</div><div class="line">    <span class="attr">posterFrameSrc</span>: React.PropTypes.string.isRequired,</div><div class="line">    <span class="attr">videoSrc</span>: React.PropTypes.string.isRequired,</div><div class="line">  &#125;</div><div class="line">  state = &#123;</div><div class="line">    <span class="attr">loopsRemaining</span>: <span class="keyword">this</span>.props.maxLoops,</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="react中的事件"><a href="#react中的事件" class="headerlink" title="react中的事件"></a>react中的事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostInfo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="comment">// Manually bind this method to the component instance...</span></div><div class="line">    <span class="keyword">this</span>.handleOptionsButtonClick = <span class="keyword">this</span>.handleOptionsButtonClick.bind(<span class="keyword">this</span>);</div><div class="line">  &#125;</div><div class="line">  handleOptionsButtonClick(e) &#123;</div><div class="line">    <span class="comment">// this应指向实例</span></div><div class="line">    <span class="keyword">this</span>.setState(&#123;<span class="attr">showOptionsModal</span>: <span class="literal">true</span>&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//箭头函数this指向外层的组件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PostInfo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  handleOptionsButtonClick = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123;<span class="attr">showOptionsModal</span>: <span class="literal">true</span>&#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用ES6改写的React组件程序</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Checkbox</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">isChecked</span>: <span class="literal">false</span>&#125;;</div><div class="line">        <span class="keyword">this</span>.changeState = <span class="keyword">this</span>.changeState.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    changeState () &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">isChecked</span>: !<span class="keyword">this</span>.state.isChecked&#125;)</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">checked</span>=<span class="string">&#123;this.state.isChecked&#125;</span> <span class="attr">onChange</span>=<span class="string">&#123;this.changeState&#125;</span> /&gt;</span></div><div class="line">            &#123;this.state.isChecked ? this.props.labelOn : this.props.labelOff&#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">label</span>&gt;</span>)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">export default Checkbox;</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Checkbox</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123;<span class="attr">isChecked</span>: <span class="literal">false</span>&#125;;</div><div class="line">        <span class="keyword">this</span>.changeState = <span class="keyword">this</span>.changeState.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    changeState () &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123;<span class="attr">isChecked</span>: !<span class="keyword">this</span>.state.isChecked&#125;)</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (&lt;label&gt;</div><div class="line">            &lt;input type="checkbox" checked=&#123;this.state.isChecked&#125; onChange=&#123;this.changeState&#125; /&gt;</div><div class="line">            &#123;this.state.isChecked ? this.props.labelOn : this.props.labelOff&#125;</div><div class="line">        &lt;/label&gt;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">export default Checkbox;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -259,9 +259,9 @@
     
       <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
-    
       <category term="ES6" scheme="https://zhangmeng712.github.io/Mtags/ES6/"/>
+    
+      <category term="React" scheme="https://zhangmeng712.github.io/Mtags/React/"/>
     
   </entry>
   
@@ -810,11 +810,11 @@ suite('markers default', function () {
       <category term="responsive design" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/responsive-design/"/>
     
     
-      <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
+      <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
     
       <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
-      <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
+      <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
     
       <category term="galenframework" scheme="https://zhangmeng712.github.io/Mtags/galenframework/"/>
     
@@ -1092,6 +1092,8 @@ suite('markers default', function () {
       <category term="testing" scheme="https://zhangmeng712.github.io/categories/nodejs/testing/"/>
     
     
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
+    
       <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
       <category term="android" scheme="https://zhangmeng712.github.io/Mtags/android/"/>
@@ -1099,8 +1101,6 @@ suite('markers default', function () {
       <category term="appium" scheme="https://zhangmeng712.github.io/Mtags/appium/"/>
     
       <category term="ios" scheme="https://zhangmeng712.github.io/Mtags/ios/"/>
-    
-      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
       <category term="自动化测试" scheme="https://zhangmeng712.github.io/Mtags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
     
@@ -1414,11 +1414,11 @@ suite('markers default', function () {
       <category term="workflow" scheme="https://zhangmeng712.github.io/categories/javascript/workflow/"/>
     
     
-      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
-    
       <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
       <category term="browserify" scheme="https://zhangmeng712.github.io/Mtags/browserify/"/>
+    
+      <category term="nodejs" scheme="https://zhangmeng712.github.io/Mtags/nodejs/"/>
     
       <category term="webpack" scheme="https://zhangmeng712.github.io/Mtags/webpack/"/>
     
@@ -1929,11 +1929,11 @@ scale最常见的应用就是在鼠标hover的时候把图标进行放大，以�
       <category term="css3" scheme="https://zhangmeng712.github.io/categories/javascript/css3/"/>
     
     
-      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
-    
       <category term="css3" scheme="https://zhangmeng712.github.io/Mtags/css3/"/>
     
       <category term="html5" scheme="https://zhangmeng712.github.io/Mtags/html5/"/>
+    
+      <category term="javascript" scheme="https://zhangmeng712.github.io/Mtags/javascript/"/>
     
   </entry>
   

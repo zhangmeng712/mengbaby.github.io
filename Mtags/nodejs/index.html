@@ -38,6 +38,21 @@
 </head>
 
 <body>
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
     <div id="loading" class="active"></div>
 
     <aside id="menu"  >
@@ -111,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -137,14 +152,22 @@
 <div class="tabs-bar container">
     <nav class="tags-list">
         <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-            ">All</a>
+            ">全部</a>
         
 
-            <a href="/Mtags/angular/" style="-webkit-order:46;order:46" class="tags-list-item waves-effect waves-button waves-light">angular</a>
+            <a href="/Mtags/css3/" style="-webkit-order:44;order:44" class="tags-list-item waves-effect waves-button waves-light">css3</a>
 
         
 
-            <a href="/Mtags/e2e/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">e2e</a>
+            <a href="/Mtags/html5/" style="-webkit-order:45;order:45" class="tags-list-item waves-effect waves-button waves-light">html5</a>
+
+        
+
+            <a href="/Mtags/javascript/" style="-webkit-order:46;order:46" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
+
+        
+
+            <a href="/Mtags/browserify/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">browserify</a>
 
         
 
@@ -152,55 +175,55 @@
 
         
 
-            <a href="/Mtags/protractor/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">protractor</a>
+            <a href="/Mtags/webpack/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
 
         
 
-            <a href="/Mtags/android/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">android</a>
+            <a href="/Mtags/前端自动化部署/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">前端自动化部署</a>
 
         
 
-            <a href="/Mtags/appium/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">appium</a>
+            <a href="/Mtags/工具/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">工具</a>
 
         
 
-            <a href="/Mtags/ios/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">ios</a>
+            <a href="/Mtags/敏捷开发/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
 
         
 
-            <a href="/Mtags/javascript/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
+            <a href="/Mtags/ES6/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
 
         
 
-            <a href="/Mtags/自动化测试/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">自动化测试</a>
+            <a href="/Mtags/React/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">React</a>
 
         
 
-            <a href="/Mtags/browserify/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">browserify</a>
+            <a href="/Mtags/android/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">android</a>
 
         
 
-            <a href="/Mtags/webpack/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
+            <a href="/Mtags/appium/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">appium</a>
 
         
 
-            <a href="/Mtags/前端自动化部署/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">前端自动化部署</a>
+            <a href="/Mtags/ios/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">ios</a>
 
         
 
-            <a href="/Mtags/工具/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">工具</a>
+            <a href="/Mtags/自动化测试/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">自动化测试</a>
 
         
 
-            <a href="/Mtags/敏捷开发/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
+            <a href="/Mtags/angular/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">angular</a>
 
         
 
-            <a href="/Mtags/css3/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">css3</a>
+            <a href="/Mtags/e2e/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">e2e</a>
 
         
 
-            <a href="/Mtags/html5/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">html5</a>
+            <a href="/Mtags/protractor/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">protractor</a>
 
         
 
@@ -260,71 +283,63 @@
 
         
 
-            <a href="/Mtags/React/" style="-webkit-order:29;order:29" class="tags-list-item waves-effect waves-button waves-light">React</a>
+            <a href="/Mtags/前端单元测试/" style="-webkit-order:29;order:29" class="tags-list-item waves-effect waves-button waves-light">前端单元测试</a>
 
         
 
-            <a href="/Mtags/前端单元测试/" style="-webkit-order:30;order:30" class="tags-list-item waves-effect waves-button waves-light">前端单元测试</a>
+            <a href="/Mtags/polymer/" style="-webkit-order:30;order:30" class="tags-list-item waves-effect waves-button waves-light">polymer</a>
 
         
 
-            <a href="/Mtags/polymer/" style="-webkit-order:31;order:31" class="tags-list-item waves-effect waves-button waves-light">polymer</a>
+            <a href="/Mtags/unit-test/" style="-webkit-order:31;order:31" class="tags-list-item waves-effect waves-button waves-light">unit test</a>
 
         
 
-            <a href="/Mtags/unit-test/" style="-webkit-order:32;order:32" class="tags-list-item waves-effect waves-button waves-light">unit test</a>
+            <a href="/Mtags/web-components/" style="-webkit-order:32;order:32" class="tags-list-item waves-effect waves-button waves-light">web components</a>
 
         
 
-            <a href="/Mtags/web-components/" style="-webkit-order:33;order:33" class="tags-list-item waves-effect waves-button waves-light">web components</a>
+            <a href="/Mtags/web-components-tester/" style="-webkit-order:33;order:33" class="tags-list-item waves-effect waves-button waves-light">web-components-tester</a>
 
         
 
-            <a href="/Mtags/web-components-tester/" style="-webkit-order:34;order:34" class="tags-list-item waves-effect waves-button waves-light">web-components-tester</a>
+            <a href="/Mtags/galenframework/" style="-webkit-order:34;order:34" class="tags-list-item waves-effect waves-button waves-light">galenframework</a>
 
         
 
-            <a href="/Mtags/ES6/" style="-webkit-order:35;order:35" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
+            <a href="/Mtags/responsive-design/" style="-webkit-order:35;order:35" class="tags-list-item waves-effect waves-button waves-light">responsive design</a>
 
         
 
-            <a href="/Mtags/galenframework/" style="-webkit-order:36;order:36" class="tags-list-item waves-effect waves-button waves-light">galenframework</a>
+            <a href="/Mtags/UI自动化测试/" style="-webkit-order:36;order:36" class="tags-list-item waves-effect waves-button waves-light">UI自动化测试</a>
 
         
 
-            <a href="/Mtags/responsive-design/" style="-webkit-order:37;order:37" class="tags-list-item waves-effect waves-button waves-light">responsive design</a>
+            <a href="/Mtags/响应式设计/" style="-webkit-order:37;order:37" class="tags-list-item waves-effect waves-button waves-light">响应式设计</a>
 
         
 
-            <a href="/Mtags/UI自动化测试/" style="-webkit-order:38;order:38" class="tags-list-item waves-effect waves-button waves-light">UI自动化测试</a>
+            <a href="/Mtags/sinon/" style="-webkit-order:38;order:38" class="tags-list-item waves-effect waves-button waves-light">sinon</a>
 
         
 
-            <a href="/Mtags/响应式设计/" style="-webkit-order:39;order:39" class="tags-list-item waves-effect waves-button waves-light">响应式设计</a>
+            <a href="/Mtags/flexbox/" style="-webkit-order:39;order:39" class="tags-list-item waves-effect waves-button waves-light">flexbox</a>
 
         
 
-            <a href="/Mtags/sinon/" style="-webkit-order:40;order:40" class="tags-list-item waves-effect waves-button waves-light">sinon</a>
+            <a href="/Mtags/mobile/" style="-webkit-order:40;order:40" class="tags-list-item waves-effect waves-button waves-light">mobile</a>
 
         
 
-            <a href="/Mtags/flexbox/" style="-webkit-order:41;order:41" class="tags-list-item waves-effect waves-button waves-light">flexbox</a>
+            <a href="/Mtags/mobile-layout/" style="-webkit-order:41;order:41" class="tags-list-item waves-effect waves-button waves-light">mobile-layout</a>
 
         
 
-            <a href="/Mtags/mobile/" style="-webkit-order:42;order:42" class="tags-list-item waves-effect waves-button waves-light">mobile</a>
+            <a href="/Mtags/rem/" style="-webkit-order:42;order:42" class="tags-list-item waves-effect waves-button waves-light">rem</a>
 
         
 
-            <a href="/Mtags/mobile-layout/" style="-webkit-order:43;order:43" class="tags-list-item waves-effect waves-button waves-light">mobile-layout</a>
-
-        
-
-            <a href="/Mtags/rem/" style="-webkit-order:44;order:44" class="tags-list-item waves-effect waves-button waves-light">rem</a>
-
-        
-
-            <a href="/Mtags/viewport/" style="-webkit-order:45;order:45" class="tags-list-item waves-effect waves-button waves-light">viewport</a>
+            <a href="/Mtags/viewport/" style="-webkit-order:43;order:43" class="tags-list-item waves-effect waves-button waves-light">viewport</a>
 
         
     </nav>
@@ -569,7 +584,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">

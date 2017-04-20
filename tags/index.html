@@ -39,6 +39,21 @@
 </head>
 
 <body>
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
     <div id="loading" class="active"></div>
 
     <aside id="menu"  >
@@ -112,7 +127,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -138,154 +153,154 @@
 <div class="tabs-bar container">
     <nav class="tags-list">
         <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-             active">All</a>
+             active">全部</a>
         
 
-            <a href="/Mtags/angular/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">angular</a>
-
-        
-
-            <a href="/Mtags/e2e/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">e2e</a>
+            <a href="/Mtags/css3/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">css3</a>
 
         
 
-            <a href="/Mtags/nodejs/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">nodejs</a>
+            <a href="/Mtags/html5/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">html5</a>
 
         
 
-            <a href="/Mtags/protractor/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">protractor</a>
+            <a href="/Mtags/javascript/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
 
         
 
-            <a href="/Mtags/android/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">android</a>
+            <a href="/Mtags/browserify/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">browserify</a>
 
         
 
-            <a href="/Mtags/appium/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">appium</a>
+            <a href="/Mtags/nodejs/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">nodejs</a>
 
         
 
-            <a href="/Mtags/ios/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">ios</a>
+            <a href="/Mtags/webpack/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
 
         
 
-            <a href="/Mtags/javascript/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">javascript</a>
+            <a href="/Mtags/前端自动化部署/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">前端自动化部署</a>
 
         
 
-            <a href="/Mtags/自动化测试/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">自动化测试</a>
+            <a href="/Mtags/工具/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">工具</a>
 
         
 
-            <a href="/Mtags/browserify/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">browserify</a>
+            <a href="/Mtags/敏捷开发/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
 
         
 
-            <a href="/Mtags/webpack/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">webpack</a>
+            <a href="/Mtags/ES6/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
 
         
 
-            <a href="/Mtags/前端自动化部署/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">前端自动化部署</a>
+            <a href="/Mtags/React/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">React</a>
 
         
 
-            <a href="/Mtags/工具/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">工具</a>
+            <a href="/Mtags/android/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">android</a>
 
         
 
-            <a href="/Mtags/敏捷开发/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">敏捷开发</a>
+            <a href="/Mtags/appium/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">appium</a>
 
         
 
-            <a href="/Mtags/css3/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">css3</a>
+            <a href="/Mtags/ios/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">ios</a>
 
         
 
-            <a href="/Mtags/html5/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">html5</a>
+            <a href="/Mtags/自动化测试/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">自动化测试</a>
 
         
 
-            <a href="/Mtags/chai/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">chai</a>
+            <a href="/Mtags/angular/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">angular</a>
 
         
 
-            <a href="/Mtags/chai-as-promise/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">chai as promise</a>
+            <a href="/Mtags/e2e/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">e2e</a>
 
         
 
-            <a href="/Mtags/mocha/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">mocha</a>
+            <a href="/Mtags/protractor/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">protractor</a>
 
         
 
-            <a href="/Mtags/ui测试/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">ui测试</a>
+            <a href="/Mtags/chai/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">chai</a>
 
         
 
-            <a href="/Mtags/单元测试/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">单元测试</a>
+            <a href="/Mtags/chai-as-promise/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">chai as promise</a>
 
         
 
-            <a href="/Mtags/断言/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">断言</a>
+            <a href="/Mtags/mocha/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">mocha</a>
 
         
 
-            <a href="/Mtags/selenium/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">selenium</a>
+            <a href="/Mtags/ui测试/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">ui测试</a>
 
         
 
-            <a href="/Mtags/UI/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">UI</a>
+            <a href="/Mtags/单元测试/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">单元测试</a>
 
         
 
-            <a href="/Mtags/wd-js/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">wd.js</a>
+            <a href="/Mtags/断言/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">断言</a>
 
         
 
-            <a href="/Mtags/webdriver/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">webdriver</a>
+            <a href="/Mtags/selenium/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">selenium</a>
 
         
 
-            <a href="/Mtags/前端/" style="-webkit-order:26;order:26" class="tags-list-item waves-effect waves-button waves-light">前端</a>
+            <a href="/Mtags/UI/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">UI</a>
 
         
 
-            <a href="/Mtags/bdd/" style="-webkit-order:27;order:27" class="tags-list-item waves-effect waves-button waves-light">bdd</a>
+            <a href="/Mtags/wd-js/" style="-webkit-order:26;order:26" class="tags-list-item waves-effect waves-button waves-light">wd.js</a>
 
         
 
-            <a href="/Mtags/异步/" style="-webkit-order:28;order:28" class="tags-list-item waves-effect waves-button waves-light">异步</a>
+            <a href="/Mtags/webdriver/" style="-webkit-order:27;order:27" class="tags-list-item waves-effect waves-button waves-light">webdriver</a>
 
         
 
-            <a href="/Mtags/jest/" style="-webkit-order:29;order:29" class="tags-list-item waves-effect waves-button waves-light">jest</a>
+            <a href="/Mtags/前端/" style="-webkit-order:28;order:28" class="tags-list-item waves-effect waves-button waves-light">前端</a>
 
         
 
-            <a href="/Mtags/React/" style="-webkit-order:30;order:30" class="tags-list-item waves-effect waves-button waves-light">React</a>
+            <a href="/Mtags/bdd/" style="-webkit-order:29;order:29" class="tags-list-item waves-effect waves-button waves-light">bdd</a>
 
         
 
-            <a href="/Mtags/前端单元测试/" style="-webkit-order:31;order:31" class="tags-list-item waves-effect waves-button waves-light">前端单元测试</a>
+            <a href="/Mtags/异步/" style="-webkit-order:30;order:30" class="tags-list-item waves-effect waves-button waves-light">异步</a>
 
         
 
-            <a href="/Mtags/polymer/" style="-webkit-order:32;order:32" class="tags-list-item waves-effect waves-button waves-light">polymer</a>
+            <a href="/Mtags/jest/" style="-webkit-order:31;order:31" class="tags-list-item waves-effect waves-button waves-light">jest</a>
 
         
 
-            <a href="/Mtags/unit-test/" style="-webkit-order:33;order:33" class="tags-list-item waves-effect waves-button waves-light">unit test</a>
+            <a href="/Mtags/前端单元测试/" style="-webkit-order:32;order:32" class="tags-list-item waves-effect waves-button waves-light">前端单元测试</a>
 
         
 
-            <a href="/Mtags/web-components/" style="-webkit-order:34;order:34" class="tags-list-item waves-effect waves-button waves-light">web components</a>
+            <a href="/Mtags/polymer/" style="-webkit-order:33;order:33" class="tags-list-item waves-effect waves-button waves-light">polymer</a>
 
         
 
-            <a href="/Mtags/web-components-tester/" style="-webkit-order:35;order:35" class="tags-list-item waves-effect waves-button waves-light">web-components-tester</a>
+            <a href="/Mtags/unit-test/" style="-webkit-order:34;order:34" class="tags-list-item waves-effect waves-button waves-light">unit test</a>
 
         
 
-            <a href="/Mtags/ES6/" style="-webkit-order:36;order:36" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
+            <a href="/Mtags/web-components/" style="-webkit-order:35;order:35" class="tags-list-item waves-effect waves-button waves-light">web components</a>
+
+        
+
+            <a href="/Mtags/web-components-tester/" style="-webkit-order:36;order:36" class="tags-list-item waves-effect waves-button waves-light">web-components-tester</a>
 
         
 
@@ -342,7 +357,7 @@
 <div class="container body-wrap fade">
     
 
-            <h3 class="archive-separator" id="tag-angular">angular</h3>
+            <h3 class="archive-separator" id="tag-css3">css3</h3>
 
             <div class="waterfall">
             
@@ -350,10 +365,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
 
 
 
@@ -363,7 +378,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
+      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
     </h3>
   
 
@@ -372,7 +387,75 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-11-22 07:26:47" datetime="2015-11-21T23:26:47.000Z"  itemprop="datePublished">2015-11-22</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/responsive-design/">responsive design</a></li></ul></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/11/22/f2e-testing-responsive/">响应式设计的自动化测试</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI自动化测试/">UI自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/galenframework/">galenframework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/responsive-design/">responsive design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/响应式设计/">响应式设计</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-03-15 09:29:14" datetime="2015-03-15T01:29:14.000Z"  itemprop="datePublished">2015-03-15</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/">css3</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/h5/">h5</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/h5/mobile/">mobile</a></li></ul></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/03/15/mobile-layout/">mobile H5布局大全-rem flexbox详解</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/flexbox/">flexbox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mobile/">mobile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mobile-layout/">mobile-layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/rem/">rem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/viewport/">viewport</a></li></ul>
 
     </div>
     
@@ -383,7 +466,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-e2e">e2e</h3>
+            <h3 class="archive-separator" id="tag-html5">html5</h3>
 
             <div class="waterfall">
             
@@ -391,10 +474,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
 
 
 
@@ -404,7 +487,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
+      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
     </h3>
   
 
@@ -413,7 +496,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
 
     </div>
     
@@ -424,7 +507,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-nodejs">nodejs</h3>
+            <h3 class="archive-separator" id="tag-javascript">javascript</h3>
 
             <div class="waterfall">
             
@@ -432,10 +515,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
 
 
 
@@ -445,7 +528,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
+      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
     </h3>
   
 
@@ -454,7 +537,75 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
 
     </div>
     
@@ -500,6 +651,183 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
+      <time class="post-time" title="2015-11-11 14:32:50" datetime="2015-11-11T06:32:50.000Z"  itemprop="datePublished">2015-11-11</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/testing/">testing</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/11/11/f2e-testing-assert/">前端自动化测试基础-断言篇：chai和chai插件的用法</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai-as-promise/">chai as promise</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ui测试/">ui测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/单元测试/">单元测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/断言/">断言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-02-10 06:47:02" datetime="2016-02-09T22:47:02.000Z"  itemprop="datePublished">2016-02-10</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/02/10/f2e-testing-jest/">前端自动化测试之单元测试（二）—— react组件的测试工具jest</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/jest/">jest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-12-31 04:04:54" datetime="2015-12-30T20:04:54.000Z"  itemprop="datePublished">2015-12-31</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/12/31/f2e-testing-polymer/">前端自动化测试之单元测试（一）—— polymer组件的测试工具</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/polymer/">polymer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/unit-test/">unit test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components/">web components</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components-tester/">web-components-tester</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-11-22 07:26:47" datetime="2015-11-21T23:26:47.000Z"  itemprop="datePublished">2015-11-22</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/responsive-design/">responsive design</a></li></ul></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/11/22/f2e-testing-responsive/">响应式设计的自动化测试</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI自动化测试/">UI自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/galenframework/">galenframework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/responsive-design/">responsive design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/响应式设计/">响应式设计</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-12-26 13:10:16" datetime="2015-12-26T05:10:16.000Z"  itemprop="datePublished">2015-12-26</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/12/26/f2e-testing-sion/">前端自动化测试基础-sinon篇章</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/sinon/">sinon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-browserify">browserify</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
       <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
 
       
@@ -523,6 +851,115 @@
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-nodejs">nodejs</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-10-22 09:08:14" datetime="2015-10-22T01:08:14.000Z"  itemprop="datePublished">2015-10-22</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/10/22/appium-install/">Appium的源码编译安装</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
 
     </div>
     
@@ -635,7 +1072,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-protractor">protractor</h3>
+            <h3 class="archive-separator" id="tag-webpack">webpack</h3>
 
             <div class="waterfall">
             
@@ -643,10 +1080,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
 
 
 
@@ -656,7 +1093,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
     </h3>
   
 
@@ -665,7 +1102,280 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-前端自动化部署">前端自动化部署</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-工具">工具</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-敏捷开发">敏捷开发</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-ES6">ES6</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
+            <h3 class="archive-separator" id="tag-React">React</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2016-02-10 06:47:02" datetime="2016-02-09T22:47:02.000Z"  itemprop="datePublished">2016-02-10</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/02/10/f2e-testing-jest/">前端自动化测试之单元测试（二）—— react组件的测试工具jest</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/jest/">jest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2015-09-06 11:04:22" datetime="2015-09-06T03:04:22.000Z"  itemprop="datePublished">2015-09-06</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/react/">react</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/06/react-depth/">React生命周期、API和深入用法</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li></ul>
 
     </div>
     
@@ -867,319 +1577,6 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-javascript">javascript</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-10-22 09:08:14" datetime="2015-10-22T01:08:14.000Z"  itemprop="datePublished">2015-10-22</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/10/22/appium-install/">Appium的源码编译安装</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-11-11 14:32:50" datetime="2015-11-11T06:32:50.000Z"  itemprop="datePublished">2015-11-11</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/testing/">testing</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/11/11/f2e-testing-assert/">前端自动化测试基础-断言篇：chai和chai插件的用法</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai/">chai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/chai-as-promise/">chai as promise</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mocha/">mocha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ui测试/">ui测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/单元测试/">单元测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/断言/">断言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016-02-10 06:47:02" datetime="2016-02-09T22:47:02.000Z"  itemprop="datePublished">2016-02-10</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/02/10/f2e-testing-jest/">前端自动化测试之单元测试（二）—— react组件的测试工具jest</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/jest/">jest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-12-31 04:04:54" datetime="2015-12-30T20:04:54.000Z"  itemprop="datePublished">2015-12-31</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/12/31/f2e-testing-polymer/">前端自动化测试之单元测试（一）—— polymer组件的测试工具</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/polymer/">polymer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/unit-test/">unit test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components/">web components</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components-tester/">web-components-tester</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-11-22 07:26:47" datetime="2015-11-21T23:26:47.000Z"  itemprop="datePublished">2015-11-22</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/responsive-design/">responsive design</a></li></ul></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/11/22/f2e-testing-responsive/">响应式设计的自动化测试</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI自动化测试/">UI自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/galenframework/">galenframework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/responsive-design/">responsive design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/响应式设计/">响应式设计</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-12-26 13:10:16" datetime="2015-12-26T05:10:16.000Z"  itemprop="datePublished">2015-12-26</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/12/26/f2e-testing-sion/">前端自动化测试基础-sinon篇章</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/sinon/">sinon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/自动化测试/">自动化测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
             <h3 class="archive-separator" id="tag-自动化测试">自动化测试</h3>
 
             <div class="waterfall">
@@ -1357,7 +1754,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-browserify">browserify</h3>
+            <h3 class="archive-separator" id="tag-angular">angular</h3>
 
             <div class="waterfall">
             
@@ -1365,10 +1762,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
 
 
 
@@ -1378,7 +1775,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
     </h3>
   
 
@@ -1387,7 +1784,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
 
     </div>
     
@@ -1398,7 +1795,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-webpack">webpack</h3>
+            <h3 class="archive-separator" id="tag-e2e">e2e</h3>
 
             <div class="waterfall">
             
@@ -1406,10 +1803,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
 
 
 
@@ -1419,7 +1816,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
     </h3>
   
 
@@ -1428,7 +1825,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
 
     </div>
     
@@ -1439,7 +1836,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-前端自动化部署">前端自动化部署</h3>
+            <h3 class="archive-separator" id="tag-protractor">protractor</h3>
 
             <div class="waterfall">
             
@@ -1447,10 +1844,10 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
+      <time class="post-time" title="2016-03-10 04:53:58" datetime="2016-03-09T20:53:58.000Z"  itemprop="datePublished">2016-03-10</time>
 
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a></li></ul></li></ul>
 
 
 
@@ -1460,7 +1857,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
+      <a class="post-title-link" href="/2016/03/10/f2e-testing-angular/">前端自动化测试（三）- angular和protracor</a>
     </h3>
   
 
@@ -1469,239 +1866,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-工具">工具</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-敏捷开发">敏捷开发</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-09-21 09:04:12" datetime="2015-09-21T01:04:12.000Z"  itemprop="datePublished">2015-09-21</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/workflow/">workflow</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/21/browserify-and-webpack/">browserify和webpack快速配置入门教程</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/browserify/">browserify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端自动化部署/">前端自动化部署</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/敏捷开发/">敏捷开发</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-css3">css3</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-11-22 07:26:47" datetime="2015-11-21T23:26:47.000Z"  itemprop="datePublished">2015-11-22</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/">testing</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/testing/responsive-design/">responsive design</a></li></ul></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/11/22/f2e-testing-responsive/">响应式设计的自动化测试</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/UI自动化测试/">UI自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/galenframework/">galenframework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/responsive-design/">responsive design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/响应式设计/">响应式设计</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-03-15 09:29:14" datetime="2015-03-15T01:29:14.000Z"  itemprop="datePublished">2015-03-15</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/">css3</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/h5/">h5</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/css3/h5/mobile/">mobile</a></li></ul></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/03/15/mobile-layout/">mobile H5布局大全-rem flexbox详解</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/flexbox/">flexbox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mobile/">mobile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/mobile-layout/">mobile-layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/rem/">rem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/viewport/">viewport</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-html5">html5</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-02-03 11:15:22" datetime="2015-02-03T03:15:22.000Z"  itemprop="datePublished">2015-02-03</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/css3/">css3</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/02/03/css3-animation-part1/">css3和动画-part1-变换</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/e2e/">e2e</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/protractor/">protractor</a></li></ul>
 
     </div>
     
@@ -2388,115 +2553,6 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-React">React</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016-02-10 06:47:02" datetime="2016-02-09T22:47:02.000Z"  itemprop="datePublished">2016-02-10</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/02/10/f2e-testing-jest/">前端自动化测试之单元测试（二）—— react组件的测试工具jest</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/jest/">jest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2015-09-06 11:04:22" datetime="2015-09-06T03:04:22.000Z"  itemprop="datePublished">2015-09-06</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/react/">react</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/06/react-depth/">React生命周期、API和深入用法</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
             <h3 class="archive-separator" id="tag-前端单元测试">前端单元测试</h3>
 
             <div class="waterfall">
@@ -2726,47 +2782,6 @@
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/polymer/">polymer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/unit-test/">unit test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components/">web components</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/web-components-tester/">web-components-tester</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/前端单元测试/">前端单元测试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-ES6">ES6</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016-01-24 14:28:03" datetime="2016-01-24T06:28:03.000Z"  itemprop="datePublished">2016-01-24</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/">javascript</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javascript/es6/">es6</a></li></ul></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/01/24/es6-basic/">ES6的核心语法与应用</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Mtags/javascript/">javascript</a></li></ul>
 
     </div>
     
@@ -3206,7 +3221,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">

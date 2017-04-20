@@ -19,9 +19,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="angular,e2e,nodejs,protractor">
+    <meta name="keywords" content="nodejs,angular,e2e,protractor">
     <meta name="description" content="protractor用于前端UI自动化测试,特别为angular程序定制 特点 端对端(e2e)测试 采用jasmine作为测试框架 基于WebDriverJS,(selenium-webdriver) 针对angular应用增加定位器,更加方便实用 实现自动等待,告别sleep wait,变异步为同步 支持测试代码的调试 支持多浏览器的并行UI测试  使用方法准备工作 1 安装protracto">
-<meta name="keywords" content="angular,e2e,nodejs,protractor">
+<meta name="keywords" content="nodejs,angular,e2e,protractor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端自动化测试（三）- angular和protracor">
 <meta property="og:url" content="https://zhangmeng712.github.io/2016/03/10/f2e-testing-angular/index.html">
@@ -40,6 +40,21 @@
 </head>
 
 <body>
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
     <div id="loading" class="active"></div>
 
     <aside id="menu" class="hide" >
@@ -113,7 +128,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -269,7 +284,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-17T07:02:37.000Z" itemprop="dateUpdated">2017-04-17 15:02:37</time>
+    最后更新时间：<time datetime="2017-04-17T07:02:37.000Z" itemprop="dateUpdated">2017-04-17 15:02:37</time>
 </span><br>
 
 
@@ -401,7 +416,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
