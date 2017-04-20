@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>https://zhangmeng712.github.io/2015/09/06/react-depth/</loc>
     <lastmod>2017-04-17T07:55:18.000Z</lastmod>
@@ -73,9 +74,9 @@
         
         <tag>javascript</tag>
          
-        <tag>ES6</tag>
-         
         <tag>React</tag>
+         
+        <tag>ES6</tag>
          
          
            
@@ -234,13 +235,13 @@
         <title>前端自动化测试之单元测试（二）—— react组件的测试工具jest</title>
         <pubTime>2016-02-09T22:47:02.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>nodejs</tag>
          
-        <tag>React</tag>
+        <tag>javascript</tag>
          
         <tag>jest</tag>
+         
+        <tag>React</tag>
          
         <tag>前端单元测试</tag>
          
@@ -262,9 +263,9 @@
         <title>前端UI自动化测试</title>
         <pubTime>2015-10-07T22:41:01.000Z</pubTime>
         
-        <tag>appium</tag>
-         
         <tag>nodejs</tag>
+         
+        <tag>appium</tag>
          
         <tag>自动化测试</tag>
          
@@ -299,11 +300,11 @@
         <title>前端自动化测试（三）- angular和protracor</title>
         <pubTime>2016-03-09T20:53:58.000Z</pubTime>
         
-        <tag>nodejs</tag>
-         
         <tag>angular</tag>
          
         <tag>e2e</tag>
+         
+        <tag>nodejs</tag>
          
         <tag>protractor</tag>
          
@@ -355,9 +356,9 @@
         <title>browserify和webpack快速配置入门教程</title>
         <pubTime>2015-09-21T01:04:12.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>nodejs</tag>
+         
+        <tag>javascript</tag>
          
         <tag>browserify</tag>
          
@@ -390,6 +391,8 @@
         <title>Appium的源码编译安装</title>
         <pubTime>2015-10-22T01:08:14.000Z</pubTime>
         
+        <tag>nodejs</tag>
+         
         <tag>android</tag>
          
         <tag>appium</tag>
@@ -397,8 +400,6 @@
         <tag>ios</tag>
          
         <tag>javascript</tag>
-         
-        <tag>nodejs</tag>
          
         <tag>自动化测试</tag>
          
